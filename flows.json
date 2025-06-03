@@ -268,7 +268,7 @@
         "type": "ui_group",
         "name": "Start Navigation Stack",
         "tab": "79e30130c0c3e81d",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -308,7 +308,7 @@
         "type": "ui_group",
         "name": "Available Topics",
         "tab": "79e30130c0c3e81d",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": "7",
         "collapse": false,
@@ -319,7 +319,7 @@
         "type": "ui_group",
         "name": "Start Perception",
         "tab": "79e30130c0c3e81d",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -410,6 +410,17 @@
         "order": 2,
         "disp": true,
         "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b2d6ce9d98dc36fb",
+        "type": "ui_group",
+        "name": "Start Localization",
+        "tab": "79e30130c0c3e81d",
+        "order": 2,
+        "disp": true,
+        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -750,7 +761,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 140,
-        "y": 400,
+        "y": 540,
         "wires": [
             [
                 "9b4d53acb9d788f6"
@@ -779,7 +790,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 460,
+        "y": 600,
         "wires": [
             [
                 "9b4d53acb9d788f6"
@@ -799,7 +810,7 @@
         "oldrc": false,
         "name": "",
         "x": 420,
-        "y": 400,
+        "y": 540,
         "wires": [
             [
                 "e4a14dfc2b972a3a"
@@ -828,7 +839,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 670,
-        "y": 380,
+        "y": 520,
         "wires": []
     },
     {
@@ -847,7 +858,7 @@
         "topic": "",
         "name": "",
         "x": 730,
-        "y": 440,
+        "y": 580,
         "wires": []
     },
     {
@@ -871,7 +882,7 @@
         "topic": "",
         "topicType": "str",
         "x": 130,
-        "y": 600,
+        "y": 740,
         "wires": [
             [
                 "e26b067d421c31d5"
@@ -894,7 +905,7 @@
         "templateScope": "local",
         "className": "",
         "x": 840,
-        "y": 600,
+        "y": 740,
         "wires": [
             []
         ]
@@ -920,7 +931,7 @@
         "topic": "",
         "topicType": "str",
         "x": 160,
-        "y": 660,
+        "y": 800,
         "wires": [
             [
                 "e26b067d421c31d5"
@@ -948,7 +959,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 150,
-        "y": 740,
+        "y": 880,
         "wires": [
             [
                 "79fb1f880317941f"
@@ -968,7 +979,7 @@
         "oldrc": false,
         "name": "",
         "x": 370,
-        "y": 740,
+        "y": 880,
         "wires": [
             [
                 "b191837a6aa879ba"
@@ -1001,7 +1012,7 @@
         "outputs": 1,
         "cts": true,
         "x": 350,
-        "y": 860,
+        "y": 1000,
         "wires": [
             [
                 "13a9418beaf69d76"
@@ -1021,7 +1032,7 @@
         "finalize": "",
         "libs": [],
         "x": 640,
-        "y": 720,
+        "y": 860,
         "wires": [
             [
                 "85b1c71d8d9d20b6"
@@ -1041,7 +1052,7 @@
         "oldrc": false,
         "name": "",
         "x": 880,
-        "y": 820,
+        "y": 960,
         "wires": [
             [
                 "aacdb5a5b38b8a24"
@@ -1070,7 +1081,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1130,
-        "y": 760,
+        "y": 900,
         "wires": []
     },
     {
@@ -1089,7 +1100,7 @@
         "topic": "",
         "name": "",
         "x": 1170,
-        "y": 880,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1105,7 +1116,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 600,
+        "y": 740,
         "wires": [
             [
                 "5e1f0081.6dc3c",
@@ -1126,7 +1137,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
-        "y": 660,
+        "y": 800,
         "wires": []
     },
     {
@@ -1150,7 +1161,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 140,
-        "y": 260,
+        "y": 400,
         "wires": [
             [
                 "3fdbd81d6eea9c13"
@@ -1179,7 +1190,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 180,
-        "y": 320,
+        "y": 460,
         "wires": [
             [
                 "3fdbd81d6eea9c13"
@@ -1199,7 +1210,7 @@
         "oldrc": false,
         "name": "",
         "x": 420,
-        "y": 260,
+        "y": 400,
         "wires": [
             [
                 "f7f1299556af86cc"
@@ -1228,7 +1239,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 670,
-        "y": 240,
+        "y": 380,
         "wires": []
     },
     {
@@ -1247,7 +1258,128 @@
         "topic": "",
         "name": "",
         "x": 710,
-        "y": 280,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "dd5dc58938ab02a6",
+        "type": "ui_button",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "b2d6ce9d98dc36fb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Execute",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "d9d3edbf36645663"
+            ]
+        ]
+    },
+    {
+        "id": "6d2fa74dedb84d55",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "Start Localization",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "d9d3edbf36645663"
+            ]
+        ]
+    },
+    {
+        "id": "d9d3edbf36645663",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "./start_localization.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "6f217ce785d4f4a6"
+            ],
+            [
+                "3e44debbb03dc28f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6f217ce785d4f4a6",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "b2d6ce9d98dc36fb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3e44debbb03dc28f",
+        "type": "ui_toast",
+        "z": "670db36a34c094fb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 670,
+        "y": 260,
         "wires": []
     },
     {
@@ -2156,6 +2288,24 @@
         "x": 450,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "91cc74f2dd573625",
+        "type": "ui_editor",
+        "z": "f2f0aa16f681ef71",
+        "group": "b83b032dcd61da69",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "readonly": true,
+        "monitorUpdate": false,
+        "outputs": 1,
+        "x": 1530,
+        "y": 680,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "c8d77e8fdd38a068",

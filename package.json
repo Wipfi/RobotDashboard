@@ -2,7 +2,17 @@
     "name": "RobotDashboard",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-flowake-ros-nodes": "1.2.0",
+        "node-red-contrib-image-output": "0.6.4",
+        "node-red-contrib-ip": "1.0.2",
+        "node-red-contrib-ui-editor": "0.0.1",
+        "node-red-contrib-ui-joystick": "1.0.1",
+        "node-red-contrib-web-worldmap": "5.1.6",
+        "node-red-contrib-xterm": "1.0.1",
+        "node-red-dashboard": "3.6.5",
+        "node-red-node-ui-table": "0.4.4"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
