@@ -19,7 +19,7 @@
         "id": "a1c3ab294062a9b3",
         "type": "tab",
         "label": "Data Recording",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -27,7 +27,7 @@
         "id": "f69bae880fbb51b3",
         "type": "tab",
         "label": "Tools",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -35,7 +35,7 @@
         "id": "f2f0aa16f681ef71",
         "type": "tab",
         "label": "Localization",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -43,7 +43,7 @@
         "id": "5a08227995dbfc1f",
         "type": "tab",
         "label": "TeleOp",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -51,7 +51,7 @@
         "id": "51781a72170cabab",
         "type": "tab",
         "label": "Planning",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,7 +59,7 @@
         "id": "3cc872fad043da0d",
         "type": "tab",
         "label": "CAN",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -67,7 +67,7 @@
         "id": "fd662816d78b75bb",
         "type": "tab",
         "label": "Computer Vision",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -509,7 +509,8 @@
         "wires": [
             [
                 "46732701c615247c",
-                "e85ccc599bd31e09"
+                "e85ccc599bd31e09",
+                "5c1d2194c50c7fff"
             ]
         ]
     },
@@ -886,8 +887,8 @@
         "z": "670db36a34c094fb",
         "group": "a4cfd8e58fb1dcb0",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 2,
         "name": "",
         "label": "",
         "format": "{{msg.payload}}",
@@ -1054,8 +1055,8 @@
         "group": "c7aadab876af6ca4",
         "name": "",
         "order": 2,
-        "width": "7",
-        "height": "6",
+        "width": 7,
+        "height": 6,
         "columns": [
             {
                 "field": "topic",
@@ -1128,8 +1129,8 @@
         "z": "670db36a34c094fb",
         "group": "c7aadab876af6ca4",
         "order": 3,
-        "width": "4",
-        "height": "3",
+        "width": 4,
+        "height": 3,
         "name": "",
         "label": "Info (click on Topic)",
         "format": "{{msg.payload}}",
@@ -2353,7 +2354,7 @@
         "type": "ui_editor",
         "z": "f2f0aa16f681ef71",
         "group": "b83b032dcd61da69",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2583,6 +2584,7 @@
         "id": "2cf27cc5a2b9009b",
         "type": "ui_button",
         "z": "5a08227995dbfc1f",
+        "d": true,
         "name": "",
         "group": "60c5d744c25118f4",
         "order": 4,
@@ -2611,6 +2613,7 @@
         "id": "5149a23985b8c076",
         "type": "ui_button",
         "z": "5a08227995dbfc1f",
+        "d": true,
         "name": "",
         "group": "60c5d744c25118f4",
         "order": 5,
@@ -2639,6 +2642,7 @@
         "id": "cea227935ab764fd",
         "type": "exec",
         "z": "5a08227995dbfc1f",
+        "d": true,
         "command": "ros2 topic pub --once /rovo3/activate_software_control std_msgs/Bool \"data: true\"",
         "addpay": "",
         "append": "",
@@ -2659,6 +2663,7 @@
         "id": "31ed80294a83bdb9",
         "type": "exec",
         "z": "5a08227995dbfc1f",
+        "d": true,
         "command": "ros2 topic pub --once /rovo3/activate_software_control std_msgs/Bool \"data: false\"",
         "addpay": "",
         "append": "",
@@ -3110,6 +3115,741 @@
         "wires": [
             [
                 "5d3b8eb50192eff3"
+            ]
+        ]
+    },
+    {
+        "id": "521389ba55a86ab2",
+        "type": "tab",
+        "label": "Waypoints",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9d7722c403ec8a9b",
+        "type": "ui_spacer",
+        "z": "670db36a34c094fb",
+        "name": "spacer",
+        "group": "c7aadab876af6ca4",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c1ae3c993ccfb627",
+        "type": "ui_spacer",
+        "z": "670db36a34c094fb",
+        "name": "spacer",
+        "group": "c7aadab876af6ca4",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ab4f807331473b79",
+        "type": "ui_spacer",
+        "z": "670db36a34c094fb",
+        "name": "spacer",
+        "group": "c7aadab876af6ca4",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "aef33edd5e133964",
+        "type": "ui_tab",
+        "name": "Waypoints",
+        "icon": "marker",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "476c02ca5a66a278",
+        "type": "ui_group",
+        "name": "Record",
+        "tab": "aef33edd5e133964",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60155d7411db5822",
+        "type": "ui_group",
+        "name": "Follow",
+        "tab": "aef33edd5e133964",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "58733c0d488e6fe7",
+        "type": "ui_spacer",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "476c02ca5a66a278",
+        "order": 6,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "06b7a3ccddf866f5",
+        "type": "ui_spacer",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "60155d7411db5822",
+        "order": 7,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "47c5eae908e3c679",
+        "type": "ui_spacer",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "476c02ca5a66a278",
+        "order": 3,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "87d9ce6addbab8e3",
+        "type": "ui_spacer",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "60155d7411db5822",
+        "order": 4,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "5c1d2194c50c7fff",
+        "type": "exec",
+        "z": "77a5f43363216f4f",
+        "command": "mkdir ~/waypoints",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f76c9f7850090914",
+        "type": "debug",
+        "z": "f2f0aa16f681ef71",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b809e76ef66e73db",
+        "type": "ui_button",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "476c02ca5a66a278",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "a89be770afe47fdb"
+            ]
+        ]
+    },
+    {
+        "id": "a89be770afe47fdb",
+        "type": "function",
+        "z": "521389ba55a86ab2",
+        "name": "function 7",
+        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    return null;\n}\n\nif(msg.topic === \"distance\") {\n    context.set(\"distance\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    var distance = context.get(\"distance\");\n    msg.payload = \"~/waypoints/\" + filename + \" \" + distance;\n    return msg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "5f2f4e4337bb0e27"
+            ]
+        ]
+    },
+    {
+        "id": "5050a59a280a0d54",
+        "type": "ui_text_input",
+        "z": "521389ba55a86ab2",
+        "name": "filename",
+        "label": "Filename (*.yaml)",
+        "tooltip": "",
+        "group": "476c02ca5a66a278",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "filename",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "a89be770afe47fdb"
+            ]
+        ]
+    },
+    {
+        "id": "d9af7d6c545f8569",
+        "type": "inject",
+        "z": "521389ba55a86ab2",
+        "name": "default filename",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 120,
+        "y": 220,
+        "wires": [
+            [
+                "5050a59a280a0d54"
+            ]
+        ]
+    },
+    {
+        "id": "5f2f4e4337bb0e27",
+        "type": "exec",
+        "z": "521389ba55a86ab2",
+        "command": "ros2 launch nav2_gps_waypoint_follower_demo gps_waypoint_logger.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 980,
+        "y": 260,
+        "wires": [
+            [
+                "5998d39d49912024"
+            ],
+            [
+                "5998d39d49912024"
+            ],
+            [
+                "5998d39d49912024"
+            ]
+        ]
+    },
+    {
+        "id": "01b4884a14cbd604",
+        "type": "debug",
+        "z": "521389ba55a86ab2",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a859e17989903f93",
+        "type": "inject",
+        "z": "521389ba55a86ab2",
+        "name": "default distance",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "2fbe34dd3178a27a"
+            ]
+        ]
+    },
+    {
+        "id": "2fbe34dd3178a27a",
+        "type": "ui_text_input",
+        "z": "521389ba55a86ab2",
+        "name": "distance",
+        "label": "Distance",
+        "tooltip": "",
+        "group": "476c02ca5a66a278",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "1",
+        "topic": "distance",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "a89be770afe47fdb"
+            ]
+        ]
+    },
+    {
+        "id": "5998d39d49912024",
+        "type": "ui_text",
+        "z": "521389ba55a86ab2",
+        "group": "476c02ca5a66a278",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1350,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "51efff49fdc07af6",
+        "type": "inject",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "5ad3fad24718dcb9"
+            ]
+        ]
+    },
+    {
+        "id": "5ad3fad24718dcb9",
+        "type": "exec",
+        "z": "521389ba55a86ab2",
+        "command": "find ~/waypoints -type f",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "dfc8c5228420b230"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dfc8c5228420b230",
+        "type": "function",
+        "z": "521389ba55a86ab2",
+        "name": "function 8",
+        "func": "let files = msg.payload.split('\\n');\nvar listOfObjects = [];\n\nfiles.forEach(function (entry) {\n    var singleObj = {};\n    singleObj['filename'] = entry;\n    listOfObjects.push(singleObj);\n});\n\nmsg.payload = listOfObjects\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "892038512b163f7d"
+            ]
+        ]
+    },
+    {
+        "id": "b180e8ed3bdf5d31",
+        "type": "ui_text_input",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "label": "absolute filepath",
+        "tooltip": "",
+        "group": "60155d7411db5822",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "1",
+        "topic": "filename",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "e556caeadf1090c0"
+            ]
+        ]
+    },
+    {
+        "id": "ba6a945b5b2912bb",
+        "type": "inject",
+        "z": "521389ba55a86ab2",
+        "name": "waypoints",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "~/waypoints/",
+        "payloadType": "str",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "b180e8ed3bdf5d31"
+            ]
+        ]
+    },
+    {
+        "id": "e556caeadf1090c0",
+        "type": "function",
+        "z": "521389ba55a86ab2",
+        "name": "function 9",
+        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    msg.payload = filename;\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 700,
+        "wires": [
+            [
+                "22c5188ce128e07e"
+            ]
+        ]
+    },
+    {
+        "id": "33e5c6188677dbe1",
+        "type": "ui_button",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "60155d7411db5822",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "button",
+        "topicType": "str",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "e556caeadf1090c0"
+            ]
+        ]
+    },
+    {
+        "id": "22c5188ce128e07e",
+        "type": "exec",
+        "z": "521389ba55a86ab2",
+        "command": "ros2 launch nav2_gps_waypoint_follower_demo logged_waypoint_follower.py ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 970,
+        "y": 700,
+        "wires": [
+            [
+                "858fb0b4e92b094c"
+            ],
+            [
+                "858fb0b4e92b094c"
+            ],
+            [
+                "858fb0b4e92b094c"
+            ]
+        ]
+    },
+    {
+        "id": "858fb0b4e92b094c",
+        "type": "ui_text",
+        "z": "521389ba55a86ab2",
+        "group": "60155d7411db5822",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "dab9becb84f1f882",
+        "type": "ui_button",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "476c02ca5a66a278",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "str",
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "d83dd9d86bbc1a3a"
+            ]
+        ]
+    },
+    {
+        "id": "d83dd9d86bbc1a3a",
+        "type": "exec",
+        "z": "521389ba55a86ab2",
+        "command": "ros2 node kill /gps_waypoint_logger",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "5998d39d49912024"
+            ],
+            [
+                "5998d39d49912024"
+            ],
+            [
+                "5998d39d49912024"
+            ]
+        ]
+    },
+    {
+        "id": "343bed4963231d15",
+        "type": "ui_button",
+        "z": "521389ba55a86ab2",
+        "name": "",
+        "group": "60155d7411db5822",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "button",
+        "topicType": "str",
+        "x": 610,
+        "y": 820,
+        "wires": [
+            [
+                "45ea029ebc755816"
+            ]
+        ]
+    },
+    {
+        "id": "45ea029ebc755816",
+        "type": "exec",
+        "z": "521389ba55a86ab2",
+        "command": "ros2 node kill /gps_waypoint_logger",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 920,
+        "y": 820,
+        "wires": [
+            [
+                "858fb0b4e92b094c"
+            ],
+            [
+                "858fb0b4e92b094c"
+            ],
+            [
+                "858fb0b4e92b094c"
+            ]
+        ]
+    },
+    {
+        "id": "892038512b163f7d",
+        "type": "ui_table",
+        "z": "521389ba55a86ab2",
+        "group": "60155d7411db5822",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "filename",
+                "title": "Files in ~/waypoints",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [
+                "a7ebac8b1a07b142",
+                "01b4884a14cbd604"
+            ]
+        ]
+    },
+    {
+        "id": "a7ebac8b1a07b142",
+        "type": "function",
+        "z": "521389ba55a86ab2",
+        "name": "function 10",
+        "func": "msg.payload = msg.payload['filename'];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 540,
+        "wires": [
+            [
+                "b180e8ed3bdf5d31"
             ]
         ]
     }
