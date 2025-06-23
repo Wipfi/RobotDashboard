@@ -72,6 +72,14 @@
         "env": []
     },
     {
+        "id": "9110b2f12e9b1136",
+        "type": "tab",
+        "label": "Waypoints",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "fd1f1abde3a832e0",
         "type": "ui_tab",
         "name": "Localization",
@@ -214,7 +222,7 @@
     {
         "id": "56896a1642ce3eff",
         "type": "ros-server",
-        "url": "ws://192.168.100.133:9090"
+        "url": "ws://192.168.100.123:9090"
     },
     {
         "id": "ce2c25ee7ed0f58d",
@@ -266,7 +274,7 @@
     {
         "id": "a4cfd8e58fb1dcb0",
         "type": "ui_group",
-        "name": "Start Navigation Stack",
+        "name": "Roboalm Nav Stack",
         "tab": "79e30130c0c3e81d",
         "order": 4,
         "disp": true,
@@ -319,7 +327,7 @@
         "type": "ui_group",
         "name": "Start Perception",
         "tab": "79e30130c0c3e81d",
-        "order": 3,
+        "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -416,13 +424,64 @@
     {
         "id": "b2d6ce9d98dc36fb",
         "type": "ui_group",
-        "name": "Start Localization",
+        "name": "Standard NavStack",
         "tab": "79e30130c0c3e81d",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": 6,
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "5e35405019c6b844",
+        "type": "ui_group",
+        "name": "Zico Test",
+        "tab": "79e30130c0c3e81d",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "74955bc3b624060e",
+        "type": "ui_tab",
+        "name": "Waypoints",
+        "icon": "explore",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ae47e4ec0f9e2a1b",
+        "type": "ui_group",
+        "d": true,
+        "name": "Record",
+        "tab": "74955bc3b624060e",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2c30a4757b4e34db",
+        "type": "ui_spacer",
+        "z": "77a5f43363216f4f",
+        "name": "spacer",
+        "group": "ae47e4ec0f9e2a1b",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eacab13df10f768d",
+        "type": "ui_link",
+        "name": "Router",
+        "link": "http://192.168.100.1",
+        "icon": "open_in_browser",
+        "target": "newtab",
+        "order": 10
     },
     {
         "id": "97b828b2090a7fcc",
@@ -680,7 +739,7 @@
         "id": "2f8f3a0e86e85ea0",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./start_robot.sh",
+        "command": "./roboalm_ws/src/roboalm/src/robot_bringup/scripts/start_robot.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -688,7 +747,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 380,
+        "x": 540,
         "y": 100,
         "wires": [
             [
@@ -717,7 +776,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 630,
+        "x": 1250,
         "y": 80,
         "wires": []
     },
@@ -736,8 +795,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 670,
-        "y": 120,
+        "x": 1250,
+        "y": 140,
         "wires": []
     },
     {
@@ -1161,7 +1220,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 140,
-        "y": 400,
+        "y": 240,
         "wires": [
             [
                 "3fdbd81d6eea9c13"
@@ -1189,8 +1248,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 460,
+        "x": 160,
+        "y": 320,
         "wires": [
             [
                 "3fdbd81d6eea9c13"
@@ -1201,7 +1260,7 @@
         "id": "3fdbd81d6eea9c13",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./start_perception.sh",
+        "command": "./roboalm_ws/src/roboalm/src/robot_bringup/scripts/start_perception.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1209,8 +1268,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 420,
-        "y": 400,
+        "x": 610,
+        "y": 240,
         "wires": [
             [
                 "f7f1299556af86cc"
@@ -1238,8 +1297,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 670,
-        "y": 380,
+        "x": 1130,
+        "y": 220,
         "wires": []
     },
     {
@@ -1257,8 +1316,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 710,
-        "y": 420,
+        "x": 1130,
+        "y": 280,
         "wires": []
     },
     {
@@ -1281,8 +1340,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 140,
-        "y": 240,
+        "x": 120,
+        "y": 380,
         "wires": [
             [
                 "d9d3edbf36645663"
@@ -1311,7 +1370,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 300,
+        "y": 480,
         "wires": [
             [
                 "d9d3edbf36645663"
@@ -1322,7 +1381,7 @@
         "id": "d9d3edbf36645663",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./start_localization.sh",
+        "command": "./roboalm_ws/src/roboalm/src/robot_bringup/scripts/start_navigation.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1330,8 +1389,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 400,
-        "y": 240,
+        "x": 590,
+        "y": 380,
         "wires": [
             [
                 "6f217ce785d4f4a6"
@@ -1359,8 +1418,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 630,
-        "y": 220,
+        "x": 1130,
+        "y": 340,
         "wires": []
     },
     {
@@ -1378,8 +1437,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 670,
-        "y": 260,
+        "x": 1130,
+        "y": 440,
         "wires": []
     },
     {
@@ -2111,8 +2170,8 @@
         "type": "ros-subscribe",
         "z": "f2f0aa16f681ef71",
         "server": "56896a1642ce3eff",
-        "topicname": "/fixposition/odometry_llh",
-        "x": 160,
+        "topicname": "/localization/odometry/llh",
+        "x": 170,
         "y": 120,
         "wires": [
             [
@@ -2325,7 +2384,7 @@
         "shape": "circle",
         "centerAtRelease": true,
         "x": 120,
-        "y": 180,
+        "y": 320,
         "wires": [
             [
                 "2f7f43b71a331834"
@@ -2345,8 +2404,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 240,
+        "x": 700,
+        "y": 160,
         "wires": []
     },
     {
@@ -2359,7 +2418,8 @@
         "y": 240,
         "wires": [
             [
-                "b8887b017fa1626f"
+                "b8887b017fa1626f",
+                "186933429be0ad6b"
             ]
         ]
     },
@@ -2368,9 +2428,9 @@
         "type": "ros-publish",
         "z": "5a08227995dbfc1f",
         "server": "56896a1642ce3eff",
-        "topicname": "/cmd_vel_out",
+        "topicname": "/mattro/cmd_vel",
         "msgtype": "geometry_msgs/Twist",
-        "x": 990,
+        "x": 1000,
         "y": 400,
         "wires": []
     },
@@ -2464,7 +2524,7 @@
         "type": "function",
         "z": "5a08227995dbfc1f",
         "name": "function 4",
-        "func": "// Ensure nested objects exist\nmsg.payload.vel = msg.payload.vel || {};\nmsg.payload.vel.linear = msg.payload.vel.linear || {};\nmsg.payload.vel.angular = msg.payload.vel.angular || {};\n\nmsg.payload.vel.linear.x = 0.005 * Math.sin(msg.payload.angle.radian) * msg.payload.distance\nmsg.payload.vel.angular.yaw = -0.001* Math.cos(msg.payload.angle.radian) * msg.payload.distance\n\nreturn msg;",
+        "func": "// Ensure nested objects exist\nmsg.payload.vel = msg.payload.vel || {};\nmsg.payload.vel.linear = msg.payload.vel.linear || {};\nmsg.payload.vel.angular = msg.payload.vel.angular || {};\nvar turndir=1.0\n\nif ((msg.payload.angle.degree > 15.0 && msg.payload.angle.degree < 350.0) && !(msg.payload.angle.degree <195 && msg.payload.angle.degree > 165))\n{\n    msg.payload.vel.linear.x = 0.001 * Math.sin(msg.payload.angle.radian) * msg.payload.distance\n}        \nelse\n{\n    msg.payload.vel.linear.x = 0\n    turndir = -1.0\n}\n            \nif(msg.payload.angle.degree > 15.0 && msg.payload.angle.degree < 165.0)\n    turndir = -1.0\n    \nmsg.payload.vel.angular.yaw = turndir * 0.002* Math.cos(msg.payload.angle.radian) * msg.payload.distance\n    \nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2472,7 +2532,7 @@
         "finalize": "",
         "libs": [],
         "x": 220,
-        "y": 400,
+        "y": 460,
         "wires": [
             [
                 "5a1d3d0ad12e5302",
@@ -2511,8 +2571,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 400,
+        "x": 520,
+        "y": 460,
         "wires": [
             [
                 "9b57168858775d8a"
@@ -2621,10 +2681,32 @@
         "z": "5a08227995dbfc1f",
         "server": "56896a1642ce3eff",
         "topicname": "/cmd_vel",
-        "x": 540,
-        "y": 320,
+        "x": 580,
+        "y": 260,
         "wires": [
-            []
+            [
+                "9b57168858775d8a"
+            ]
+        ]
+    },
+    {
+        "id": "186933429be0ad6b",
+        "type": "function",
+        "z": "5a08227995dbfc1f",
+        "name": "function 7",
+        "func": "msg.payload = {\n    linear: {\n        x: 0.0,\n        y: 0.0,\n        z: 0.0\n    },\n    angular: {\n        x: 0.0,\n        y: 0.0,\n        z: 0.0\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "9b57168858775d8a"
+            ]
         ]
     },
     {
