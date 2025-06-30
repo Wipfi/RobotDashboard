@@ -19,7 +19,7 @@
         "id": "bdf36601da685392",
         "type": "tab",
         "label": "DataRecordingRos2",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -27,7 +27,7 @@
         "id": "f69bae880fbb51b3",
         "type": "tab",
         "label": "Tools",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,7 +59,7 @@
         "id": "51781a72170cabab",
         "type": "tab",
         "label": "Planning",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -305,6 +305,7 @@
     {
         "id": "861625fd35ac843a",
         "type": "ui_tab",
+        "d": true,
         "name": "Tools",
         "icon": "tools",
         "order": 2,
@@ -3379,102 +3380,6 @@
         ]
     },
     {
-        "id": "2cf27cc5a2b9009b",
-        "type": "ui_button",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "group": "b83b032dcd61da69",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Connect CAN",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 120,
-        "y": 780,
-        "wires": [
-            [
-                "cea227935ab764fd"
-            ]
-        ]
-    },
-    {
-        "id": "5149a23985b8c076",
-        "type": "ui_button",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "group": "b83b032dcd61da69",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Release CAN",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 120,
-        "y": 900,
-        "wires": [
-            [
-                "31ed80294a83bdb9"
-            ]
-        ]
-    },
-    {
-        "id": "cea227935ab764fd",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "tmux send-keys -t robot_base:robot_driver.0 \"source /opt/ros/humble/setup.bash && source /home/robolab/roboalm_ws/install/setup.bash && ros2 launch rovo2_driver can_communication.launch.py\" C-m",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 880,
-        "y": 780,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "31ed80294a83bdb9",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "tmux send-keys -t robot_base:robot_driver.0 \"\" C-c",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 410,
-        "y": 900,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "d4fcb0f5bd139a90",
         "type": "ros-subscribe",
         "z": "5a08227995dbfc1f",
@@ -3506,212 +3411,6 @@
             [
                 "9b57168858775d8a"
             ]
-        ]
-    },
-    {
-        "id": "e031281d7c7abad5",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "ros2 topic pub /mattro/motor_control/power std_msgs/msg/String \"{data: 'On'}\" --once && ros2 topic pub /mattro/motor_control/speed std_msgs/msg/Int16 data:\\ 100\\  --once",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 880,
-        "y": 1100,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "54b211a533dfc40c",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "ros2 topic pub /mattro/motor_control/power std_msgs/msg/String \"{data: 'Off'}\" --once && ros2 topic pub /mattro/motor_control/speed std_msgs/msg/Int16 data:\\ 0\\  --once",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 880,
-        "y": 1160,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "57fcf1668abac6a8",
-        "type": "ui_switch",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "label": "Mulcher",
-        "tooltip": "",
-        "group": "60c5d744c25118f4",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "payload",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 80,
-        "y": 1120,
-        "wires": [
-            [
-                "26cf7027bea58d7f"
-            ]
-        ]
-    },
-    {
-        "id": "26cf7027bea58d7f",
-        "type": "switch",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 230,
-        "y": 1120,
-        "wires": [
-            [
-                "e031281d7c7abad5"
-            ],
-            [
-                "54b211a533dfc40c"
-            ]
-        ]
-    },
-    {
-        "id": "9eb4968f3f872cc9",
-        "type": "ui_switch",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "label": "Horn",
-        "tooltip": "",
-        "group": "60c5d744c25118f4",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "payload",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 110,
-        "y": 1360,
-        "wires": [
-            [
-                "0fbb9e10989d85b5"
-            ]
-        ]
-    },
-    {
-        "id": "0fbb9e10989d85b5",
-        "type": "switch",
-        "z": "5a08227995dbfc1f",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 270,
-        "y": 1360,
-        "wires": [
-            [
-                "125006d2315dbfaf"
-            ],
-            [
-                "d6296f2d2d3358ce"
-            ]
-        ]
-    },
-    {
-        "id": "125006d2315dbfaf",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "ros2 topic pub /mattro/horn std_msgs/msg/String \"{data: 'On'}\" --once",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 710,
-        "y": 1300,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "d6296f2d2d3358ce",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "ros2 topic pub /mattro/horn std_msgs/msg/String \"{data: 'Off'}\" --once",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 650,
-        "y": 1400,
-        "wires": [
-            [],
-            [],
-            []
         ]
     },
     {
