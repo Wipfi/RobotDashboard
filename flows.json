@@ -256,7 +256,7 @@
         "type": "ui_group",
         "name": "Start Robot",
         "tab": "79e30130c0c3e81d",
-        "order": 1,
+        "order": 2,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -276,7 +276,7 @@
         "type": "ui_group",
         "name": "Roboalm Nav Stack",
         "tab": "79e30130c0c3e81d",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -316,7 +316,7 @@
         "type": "ui_group",
         "name": "Available Topics",
         "tab": "79e30130c0c3e81d",
-        "order": 5,
+        "order": 6,
         "disp": true,
         "width": "7",
         "collapse": false,
@@ -327,7 +327,7 @@
         "type": "ui_group",
         "name": "Start Perception",
         "tab": "79e30130c0c3e81d",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -426,7 +426,7 @@
         "type": "ui_group",
         "name": "Standard NavStack",
         "tab": "79e30130c0c3e81d",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -437,7 +437,7 @@
         "type": "ui_group",
         "name": "Zico Test",
         "tab": "79e30130c0c3e81d",
-        "order": 6,
+        "order": 7,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -598,6 +598,17 @@
         "className": ""
     },
     {
+        "id": "a7731543c6c9a013",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "79e30130c0c3e81d",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "8fd101069a42f0ac",
         "type": "ui_button",
         "z": "670db36a34c094fb",
@@ -658,7 +669,7 @@
         "id": "2f8f3a0e86e85ea0",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./roboalm_ws/src/roboalm/src/robot_bringup/scripts/start_robot.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/base_launch.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -666,7 +677,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 540,
+        "x": 530,
         "y": 100,
         "wires": [
             [
@@ -1480,6 +1491,400 @@
         "x": 950,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "7a78215fe2b9da31",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Battery (%): ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "dac785c89f1d1996",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 topic echo --once /w200_0093/platform/bms/state",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 560,
+        "y": 1380,
+        "wires": [
+            [
+                "6cedd1903878e499"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7ff90d1129b0cc95",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "update exec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 1380,
+        "wires": [
+            [
+                "dac785c89f1d1996"
+            ]
+        ]
+    },
+    {
+        "id": "6cedd1903878e499",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 14",
+        "func": "const match = msg.payload.match(/percentage:\\s*([^\\n\\r]+)/);\nif (match && match[1]) {\nmsg.payload = Math.floor(parseFloat(match[1])*100);\nreturn msg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1380,
+        "wires": [
+            [
+                "7a78215fe2b9da31"
+            ]
+        ]
+    },
+    {
+        "id": "b9b0ee4b8219233c",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Front Livox: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "c6e7a4c91336b6e1",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rear Livox: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "3fcc1472b0d8b5e8",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Front Ouster: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "cacfb34b981915d2",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Top Ouster: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "024c0e17123ca695",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Front Camera: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1120,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "4e38f861ac9e6969",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rear Camera: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1120,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "38a8da21c700659a",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 topic echo /multi_topic_monitor --full-length --once",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 400,
+        "y": 1520,
+        "wires": [
+            [
+                "8aef7ba57e64c6b4",
+                "c50ff8a9741b8323",
+                "1a4c70ad264b040d",
+                "6be712ed62ead48b",
+                "42bc442407144747",
+                "86e8d637684e8ef6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8aef7ba57e64c6b4",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 15",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_100_116\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1460,
+        "wires": [
+            [
+                "b9b0ee4b8219233c"
+            ]
+        ]
+    },
+    {
+        "id": "c60e69742fecbae8",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "update exec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 1520,
+        "wires": [
+            [
+                "38a8da21c700659a"
+            ]
+        ]
+    },
+    {
+        "id": "c50ff8a9741b8323",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 16",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_100_115\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1500,
+        "wires": [
+            [
+                "c6e7a4c91336b6e1"
+            ]
+        ]
+    },
+    {
+        "id": "1a4c70ad264b040d",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 17",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/front_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1540,
+        "wires": [
+            [
+                "3fcc1472b0d8b5e8"
+            ]
+        ]
+    },
+    {
+        "id": "6be712ed62ead48b",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 18",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/top_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1580,
+        "wires": [
+            [
+                "cacfb34b981915d2"
+            ]
+        ]
+    },
+    {
+        "id": "42bc442407144747",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 20",
+        "func": "const raw = msg.payload;\nconst topic = \"/rear_camera/rgb/image_raw\";\n\ntry{\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1660,
+        "wires": [
+            [
+                "4e38f861ac9e6969"
+            ]
+        ]
+    },
+    {
+        "id": "86e8d637684e8ef6",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 19",
+        "func": "const raw = msg.payload;\nconst topic = \"/front_camera/rgb/image_raw\";\n\ntry{\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1620,
+        "wires": [
+            [
+                "024c0e17123ca695"
+            ]
+        ]
     },
     {
         "id": "601f5e159893700f",
