@@ -51,7 +51,7 @@
         "id": "5a08227995dbfc1f",
         "type": "tab",
         "label": "TeleOp",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -214,7 +214,7 @@
         "link": "http://192.168.101.124",
         "icon": "open_in_browser",
         "target": "iframe",
-        "order": 7
+        "order": 8
     },
     {
         "id": "eacab13df10f768d",
@@ -223,7 +223,7 @@
         "link": "http://192.168.101.2",
         "icon": "open_in_browser",
         "target": "newtab",
-        "order": 10
+        "order": 9
     },
     {
         "id": "fd1f1abde3a832e0",
@@ -285,6 +285,7 @@
         "type": "ui_tab",
         "name": "Computer Vision",
         "icon": "image",
+        "order": 10,
         "disabled": false,
         "hidden": false
     },
@@ -293,7 +294,7 @@
         "type": "ui_tab",
         "name": "Waypoints",
         "icon": "marker",
-        "order": 9,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
