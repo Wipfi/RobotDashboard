@@ -644,59 +644,6 @@
         ]
     },
     {
-        "id": "38d9c1a9c90ed881",
-        "type": "inject",
-        "z": "670db36a34c094fb",
-        "name": "Start Waypoint session",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 900,
-        "wires": [
-            [
-                "9b4d53acb9d788f6"
-            ]
-        ]
-    },
-    {
-        "id": "9b4d53acb9d788f6",
-        "type": "exec",
-        "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_waypoint_handler.sh",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 680,
-        "y": 860,
-        "wires": [
-            [
-                "e4a14dfc2b972a3a"
-            ],
-            [
-                "b5a3ef713403194b"
-            ],
-            []
-        ]
-    },
-    {
         "id": "79fb1f880317941f",
         "type": "exec",
         "z": "670db36a34c094fb",
@@ -1163,25 +1110,6 @@
         "wires": []
     },
     {
-        "id": "b5a3ef713403194b",
-        "type": "ui_toast",
-        "z": "670db36a34c094fb",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1150,
-        "y": 880,
-        "wires": []
-    },
-    {
         "id": "c6088667e90d959c",
         "type": "ui_toast",
         "z": "670db36a34c094fb",
@@ -1297,27 +1225,6 @@
         "color": "#000000",
         "x": 1250,
         "y": 80,
-        "wires": []
-    },
-    {
-        "id": "e4a14dfc2b972a3a",
-        "type": "ui_text",
-        "z": "670db36a34c094fb",
-        "group": "9140b2ca1cb18106",
-        "order": 2,
-        "width": 6,
-        "height": 2,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1130,
-        "y": 840,
         "wires": []
     },
     {
@@ -1513,34 +1420,6 @@
         "wires": [
             [
                 "2f8f3a0e86e85ea0"
-            ]
-        ]
-    },
-    {
-        "id": "81593f0f3b3e15b1",
-        "type": "ui_button",
-        "z": "670db36a34c094fb",
-        "name": "",
-        "group": "9140b2ca1cb18106",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Execute",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 220,
-        "y": 860,
-        "wires": [
-            [
-                "9b4d53acb9d788f6"
             ]
         ]
     },
@@ -1992,6 +1871,177 @@
             [],
             [
                 "f7f1299556af86cc"
+            ]
+        ]
+    },
+    {
+        "id": "38d9c1a9c90ed881",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "Start Waypoint session",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1800,
+        "wires": [
+            [
+                "9b4d53acb9d788f6"
+            ]
+        ]
+    },
+    {
+        "id": "9b4d53acb9d788f6",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "./aart25_artus/src/robot_bringup/scripts/start_waypoint_handler.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 610,
+        "y": 1760,
+        "wires": [
+            [
+                "e4a14dfc2b972a3a"
+            ],
+            [
+                "b5a3ef713403194b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "b5a3ef713403194b",
+        "type": "ui_toast",
+        "z": "670db36a34c094fb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1080,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e4a14dfc2b972a3a",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "9140b2ca1cb18106",
+        "order": 2,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1060,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "81593f0f3b3e15b1",
+        "type": "ui_button",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "9140b2ca1cb18106",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 1760,
+        "wires": [
+            [
+                "9b4d53acb9d788f6"
+            ]
+        ]
+    },
+    {
+        "id": "0b8fffb2a748f798",
+        "type": "ui_button",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "9140b2ca1cb18106",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 1880,
+        "wires": [
+            [
+                "b570212910fc9f7b"
+            ]
+        ]
+    },
+    {
+        "id": "b570212910fc9f7b",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "tmux kill-session -t waypoint_handler",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 1880,
+        "wires": [
+            [],
+            [],
+            [
+                "e4a14dfc2b972a3a"
             ]
         ]
     },
