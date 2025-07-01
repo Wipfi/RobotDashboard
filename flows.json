@@ -43,7 +43,7 @@
         "id": "f2f0aa16f681ef71",
         "type": "tab",
         "label": "Localization",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -67,7 +67,7 @@
         "id": "fd662816d78b75bb",
         "type": "tab",
         "label": "Computer Vision",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -543,31 +543,11 @@
         "id": "9d7722c403ec8a9b",
         "type": "ui_spacer",
         "z": "670db36a34c094fb",
-        "name": "spacer",
+        "name": "",
         "group": "c7aadab876af6ca4",
         "order": 3,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "c1ae3c993ccfb627",
-        "type": "ui_spacer",
-        "z": "670db36a34c094fb",
-        "name": "spacer",
-        "group": "c7aadab876af6ca4",
-        "order": 5,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "ab4f807331473b79",
-        "type": "ui_spacer",
-        "z": "670db36a34c094fb",
-        "name": "spacer",
-        "group": "c7aadab876af6ca4",
-        "order": 6,
-        "width": 3,
-        "height": 1
+        "width": "0",
+        "height": "0"
     },
     {
         "id": "58733c0d488e6fe7",
@@ -1034,7 +1014,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 14",
-        "func": "try{\n    const match = msg.payload.match(/percentage:\\s*([^\\n\\r]+)/);\n    \n    if (match && match[1]) {\n    msg.payload = Math.floor(parseFloat(match[1])*100);\n    return msg;\n    }\n}\ncatch (err) {\n    msg.payload = \"Interface not started\"\n    return msg;\n}\n\nreturn null;\n",
+        "func": "try{\n    const match = msg.payload.match(/percentage:\\s*([^\\n\\r]+)/);\n    \n    if (match && match[1]) {\n    msg.payload = Math.floor(parseFloat(match[1])*100);\n    return msg;\n    }\n}\ncatch (err) {\n    msg.payload = \"\"\n    return msg;\n}\n\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1352,7 +1332,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "style": true,
+        "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
