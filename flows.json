@@ -51,7 +51,7 @@
         "id": "5a08227995dbfc1f",
         "type": "tab",
         "label": "TeleOp",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -211,16 +211,16 @@
         "id": "594b20d02908301d",
         "type": "ui_link",
         "name": "Fixposition",
-        "link": "http://192.168.101.124",
+        "link": "http://192.168.100.124",
         "icon": "open_in_browser",
-        "target": "iframe",
+        "target": "newtab",
         "order": 8
     },
     {
         "id": "eacab13df10f768d",
         "type": "ui_link",
         "name": "Router",
-        "link": "http://192.168.101.2",
+        "link": "http://192.168.100.1",
         "icon": "open_in_browser",
         "target": "newtab",
         "order": 9
@@ -591,6 +591,31 @@
         "height": "1"
     },
     {
+        "id": "b48c705cd85f52f2",
+        "type": "ui_spacer",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "b2d6ce9d98dc36fb",
+        "order": 4,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "52e27f13724c695d",
+        "type": "dds-settings",
+        "domain": ""
+    },
+    {
+        "id": "7ecc019cfe4bfa6d",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
+        "id": "a3b1c2f6fd9a680b",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
         "id": "fa1c6f6d013cc88c",
         "type": "inject",
         "z": "670db36a34c094fb",
@@ -623,7 +648,7 @@
         "id": "2f8f3a0e86e85ea0",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/base_launch.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/base_launch.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -631,7 +656,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 510,
+        "x": 530,
         "y": 100,
         "wires": [
             [
@@ -779,7 +804,7 @@
         "id": "3fdbd81d6eea9c13",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_elevation_mapping.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/start_elevation_mapping.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -787,7 +812,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 600,
+        "x": 620,
         "y": 240,
         "wires": [
             [
@@ -833,7 +858,7 @@
         "id": "d9d3edbf36645663",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D.sh",
+        "command": "./aart25_warthog_os/src/robot_bringup/scripts/navigation_25D.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -841,7 +866,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 590,
+        "x": 620,
         "y": 360,
         "wires": [
             [
@@ -886,7 +911,7 @@
         "id": "816a702f46dcf3b4",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_semantic.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/start_semantic.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -894,7 +919,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 650,
+        "x": 610,
         "y": 660,
         "wires": [
             [
@@ -910,7 +935,7 @@
         "id": "dac785c89f1d1996",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "ros2 topic echo --once /battery_state",
+        "command": "ros2 topic echo --once /w200_0093/platform/bms/state",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -918,7 +943,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 510,
+        "x": 560,
         "y": 1380,
         "wires": [
             [
@@ -984,8 +1009,8 @@
         "command": "ros2 topic echo /multi_topic_monitor --full-length --once",
         "addpay": "",
         "append": "",
-        "useSpawn": "false",
-        "timer": "",
+        "useSpawn": "true",
+        "timer": "5",
         "winHide": false,
         "oldrc": false,
         "name": "",
@@ -995,10 +1020,15 @@
             [
                 "8aef7ba57e64c6b4",
                 "c50ff8a9741b8323",
-                "1a4c70ad264b040d"
+                "1a4c70ad264b040d",
+                "f1eb8e0b7c358918",
+                "eec747f55ce95640",
+                "e355344e8ccc1fd0"
             ],
             [],
-            []
+            [
+                "ab102314b2c57e71"
+            ]
         ]
     },
     {
@@ -1006,7 +1036,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 15",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_101_104\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n\n  if(raw.startsWith(\"code: 15\")) {\n    msg.payload = \"ERROR\"\n  }\n  const topic = \"/livox/lidar_192_168_100_116\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1055,7 +1085,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 16",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_101_103\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_100_115\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1274,7 +1304,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "b2d6ce9d98dc36fb",
-        "order": 2,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1341,7 +1371,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Top Livox: ",
+        "label": "Front Livox: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1349,8 +1379,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1100,
-        "y": 1440,
+        "x": 1110,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1362,7 +1392,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Bottom Livox: ",
+        "label": "Rear Livox: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1370,7 +1400,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1120,
+        "x": 1110,
         "y": 1500,
         "wires": []
     },
@@ -1383,7 +1413,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Camera: ",
+        "label": "Front Camera: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1391,8 +1421,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1100,
-        "y": 1560,
+        "x": 1120,
+        "y": 1540,
         "wires": []
     },
     {
@@ -1728,7 +1758,7 @@
         "z": "670db36a34c094fb",
         "name": "",
         "group": "b2d6ce9d98dc36fb",
-        "order": 1,
+        "order": 2,
         "width": "3",
         "height": "1",
         "passthru": false,
@@ -1756,7 +1786,7 @@
         "z": "670db36a34c094fb",
         "name": "",
         "group": "b2d6ce9d98dc36fb",
-        "order": 1,
+        "order": 3,
         "width": "0",
         "height": "0",
         "passthru": false,
@@ -1804,7 +1834,7 @@
         "id": "681471dc16a24fa1",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D_semantic.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/navigation_25D_semantic.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1812,7 +1842,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 630,
+        "x": 650,
         "y": 440,
         "wires": [
             [
@@ -1907,7 +1937,7 @@
         "id": "9b4d53acb9d788f6",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_waypoint_handler.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/start_waypoint_handler.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1915,7 +1945,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 610,
+        "x": 630,
         "y": 1760,
         "wires": [
             [
@@ -2042,6 +2072,247 @@
             [],
             [
                 "e4a14dfc2b972a3a"
+            ]
+        ]
+    },
+    {
+        "id": "f1eb8e0b7c358918",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 18",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/rear_camera/rgb/image_raw\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1580,
+        "wires": [
+            [
+                "95152db1aaebb0f5"
+            ]
+        ]
+    },
+    {
+        "id": "eec747f55ce95640",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 19",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/top_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1620,
+        "wires": [
+            [
+                "99eb7a98d21f6f5b"
+            ]
+        ]
+    },
+    {
+        "id": "e355344e8ccc1fd0",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 20",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/front_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1660,
+        "wires": [
+            [
+                "86706e9506e85dfa"
+            ]
+        ]
+    },
+    {
+        "id": "99eb7a98d21f6f5b",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Top Ouster: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "86706e9506e85dfa",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Front Ouster: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "95152db1aaebb0f5",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rear Camera: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1120,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "40311d9735e870c1",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 topic echo --once /fixposition/odometry_llh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 640,
+        "y": 1980,
+        "wires": [
+            [
+                "e0d0f7b2321ae51c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "151d253dbcced5e3",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "update exec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1980,
+        "wires": [
+            [
+                "40311d9735e870c1"
+            ]
+        ]
+    },
+    {
+        "id": "e0d0f7b2321ae51c",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 21",
+        "func": "try{\n    const match = msg.payload.match(/latitude:\\s*([^\\n\\r]+)/);\n    \n    if (match[1] != 0) {\n        msg.payload = \"fix ok\";\n        return msg;\n    }\n    else {\n        msg.payload = \"no fix\";\n        return msg;\n    }\n}\ncatch (err) {\n    msg.payload = \"no fix\"\n    return msg;\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1940,
+        "wires": [
+            [
+                "b4e53fd1e559af9b"
+            ]
+        ]
+    },
+    {
+        "id": "b4e53fd1e559af9b",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fixposition:  ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1270,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "ab102314b2c57e71",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "d": true,
+        "name": "function 22",
+        "func": "if(msg.payload.code === 15) {\n    msg.payload = \"DEAD\";\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1700,
+        "wires": [
+            [
+                "86706e9506e85dfa",
+                "99eb7a98d21f6f5b",
+                "95152db1aaebb0f5",
+                "3fcc1472b0d8b5e8",
+                "c6e7a4c91336b6e1",
+                "b9b0ee4b8219233c"
             ]
         ]
     },
@@ -3429,7 +3700,7 @@
         "type": "function",
         "z": "5a08227995dbfc1f",
         "name": "function 5",
-        "func": "msg.payload = {\n    linear: {\n        x: msg.payload.vel.linear.x,\n        y: 0.0,\n        z: 0.0\n    },\n    angular: {\n        x: 0.0,\n        y: 0.0,\n        z: msg.payload.vel.angular.yaw\n    }\n};\nreturn msg;",
+        "func": "const linX = msg.payload.vel.linear.x*5;\nconst angZ = msg.payload.vel.angular.yaw;\n\nmsg.payload = `ros2 topic pub --once /w200_0093/cmd_vel geometry_msgs/msg/Twist \"{linear: {x: ${linX}, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: ${angZ}}}\"`;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3440,7 +3711,8 @@
         "y": 460,
         "wires": [
             [
-                "9b57168858775d8a"
+                "38a674bf5747b632",
+                "225243e7035a0b49"
             ]
         ]
     },
@@ -3459,9 +3731,7 @@
         "x": 580,
         "y": 400,
         "wires": [
-            [
-                "9b57168858775d8a"
-            ]
+            []
         ]
     },
     {
@@ -3473,9 +3743,7 @@
         "x": 540,
         "y": 300,
         "wires": [
-            [
-                "9b57168858775d8a"
-            ]
+            []
         ]
     },
     {
@@ -3483,10 +3751,10 @@
         "type": "ros-publish",
         "z": "5a08227995dbfc1f",
         "server": "56896a1642ce3eff",
-        "topicname": "/mattro/cmd_vel",
+        "topicname": "/cmd_vel_nav",
         "msgtype": "geometry_msgs/Twist",
-        "x": 1000,
-        "y": 400,
+        "x": 1060,
+        "y": 380,
         "wires": []
     },
     {
@@ -3570,6 +3838,111 @@
         "x": 810,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "74abae0164d5dac5",
+        "type": "Subscriber",
+        "z": "5a08227995dbfc1f",
+        "topic": "/top_os/points",
+        "domain": "a3b1c2f6fd9a680b",
+        "props": [],
+        "selectedtype": "sensor_msgs/PointCloud2",
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "5c4b4bf77968618e"
+            ]
+        ]
+    },
+    {
+        "id": "5c4b4bf77968618e",
+        "type": "debug",
+        "z": "5a08227995dbfc1f",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "db8d35826847aa65",
+        "type": "ROS2 Type",
+        "z": "5a08227995dbfc1f",
+        "ros2pkg": "sensor_msgs",
+        "ros2message": "PointCloud2",
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "74abae0164d5dac5"
+            ]
+        ]
+    },
+    {
+        "id": "bbc47933b71d16d9",
+        "type": "ROS2 Inject",
+        "z": "5a08227995dbfc1f",
+        "types": [],
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "ros2type": "tf2_msgs/TFMessage",
+        "idltype": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "db8d35826847aa65"
+            ]
+        ]
+    },
+    {
+        "id": "38a674bf5747b632",
+        "type": "debug",
+        "z": "5a08227995dbfc1f",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "225243e7035a0b49",
+        "type": "exec",
+        "z": "5a08227995dbfc1f",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [],
+            [],
+            []
+        ]
     },
     {
         "id": "8aec56a96c2a710f",
