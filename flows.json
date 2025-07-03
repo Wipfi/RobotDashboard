@@ -2990,26 +2990,6 @@
         ]
     },
     {
-        "id": "fd69fa8d86177a42",
-        "type": "exec",
-        "z": "bdf36601da685392",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/record.sh",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 490,
-        "y": 80,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "192a09ad63615a72",
         "type": "ui_text",
         "z": "bdf36601da685392",
@@ -3029,28 +3009,6 @@
         "x": 1150,
         "y": 360,
         "wires": []
-    },
-    {
-        "id": "79b6f7aa53d557b3",
-        "type": "exec",
-        "z": "bdf36601da685392",
-        "command": "tmux kill-session -t recorder",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 420,
-        "y": 220,
-        "wires": [
-            [],
-            [
-                "22fba74d4f692b26"
-            ],
-            []
-        ]
     },
     {
         "id": "9c0b604985d9ca90",
@@ -3078,22 +3036,6 @@
         ]
     },
     {
-        "id": "ddb148379a130955",
-        "type": "debug",
-        "z": "bdf36601da685392",
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "22fba74d4f692b26",
         "type": "ui_toast",
         "z": "bdf36601da685392",
@@ -3108,8 +3050,8 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1280,
-        "y": 100,
+        "x": 980,
+        "y": 480,
         "wires": []
     },
     {
