@@ -820,7 +820,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 120,
         "y": 440,
         "wires": [
             [
@@ -874,8 +874,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 720,
+        "x": 170,
+        "y": 860,
         "wires": [
             [
                 "816a702f46dcf3b4"
@@ -894,8 +894,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 650,
-        "y": 660,
+        "x": 630,
+        "y": 800,
         "wires": [
             [
                 "abb7ceec8b9ac643"
@@ -1583,8 +1583,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 140,
-        "y": 660,
+        "x": 120,
+        "y": 800,
         "wires": [
             [
                 "816a702f46dcf3b4"
@@ -1642,8 +1642,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 230,
-        "y": 760,
+        "x": 210,
+        "y": 900,
         "wires": [
             [
                 "b5726b413aa54e34"
@@ -1662,8 +1662,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 530,
-        "y": 760,
+        "x": 510,
+        "y": 900,
         "wires": [
             [],
             [],
@@ -1732,7 +1732,7 @@
         "width": "3",
         "height": "1",
         "passthru": false,
-        "label": "2.5D semantic",
+        "label": "2.5D PlanB",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -1742,7 +1742,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 150,
         "y": 500,
         "wires": [
             [
@@ -1770,8 +1770,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 240,
-        "y": 540,
+        "x": 140,
+        "y": 760,
         "wires": [
             [
                 "2d624aed753c51db"
@@ -1790,8 +1790,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 520,
-        "y": 540,
+        "x": 460,
+        "y": 740,
         "wires": [
             [],
             [],
@@ -1804,7 +1804,7 @@
         "id": "681471dc16a24fa1",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D_semantic.sh",
+        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D_PlanB.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1812,7 +1812,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 630,
+        "x": 620,
         "y": 440,
         "wires": [
             [
