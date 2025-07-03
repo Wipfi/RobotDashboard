@@ -51,7 +51,7 @@
         "id": "5a08227995dbfc1f",
         "type": "tab",
         "label": "TeleOp",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -211,19 +211,19 @@
         "id": "594b20d02908301d",
         "type": "ui_link",
         "name": "Fixposition",
-        "link": "http://192.168.100.124",
+        "link": "http://192.168.101.124",
         "icon": "open_in_browser",
         "target": "newtab",
-        "order": 8
+        "order": 10
     },
     {
         "id": "eacab13df10f768d",
         "type": "ui_link",
         "name": "Router",
-        "link": "http://192.168.100.1",
+        "link": "http://192.168.101.2",
         "icon": "open_in_browser",
         "target": "newtab",
-        "order": 9
+        "order": 11
     },
     {
         "id": "fd1f1abde3a832e0",
@@ -285,7 +285,7 @@
         "type": "ui_tab",
         "name": "Computer Vision",
         "icon": "image",
-        "order": 10,
+        "order": 8,
         "disabled": false,
         "hidden": false
     },
@@ -580,6 +580,75 @@
         "height": "1"
     },
     {
+<<<<<<< Updated upstream
+=======
+        "id": "b48c705cd85f52f2",
+        "type": "ui_spacer",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "b2d6ce9d98dc36fb",
+        "order": 4,
+        "width": "6",
+        "height": "1"
+    },
+    {
+        "id": "52e27f13724c695d",
+        "type": "dds-settings",
+        "domain": ""
+    },
+    {
+        "id": "7ecc019cfe4bfa6d",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
+        "id": "a3b1c2f6fd9a680b",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
+        "id": "a6c7888adc05a60d",
+        "type": "ui_group",
+        "name": "Bag Recording",
+        "tab": "79e30130c0c3e81d",
+        "order": 8,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5dd8c48abae50cb3",
+        "type": "ui_tab",
+        "name": "Bagfile Recorder",
+        "icon": "play_arrow",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1d47537c9cdfdc93",
+        "type": "ui_group",
+        "name": "Bag Recorder",
+        "tab": "5dd8c48abae50cb3",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c0c39b2fc2a2f2e",
+        "type": "ui_spacer",
+        "z": "bdf36601da685392",
+        "name": "",
+        "group": "a6c7888adc05a60d",
+        "order": 3,
+        "width": "6",
+        "height": "1"
+    },
+    {
+>>>>>>> Stashed changes
         "id": "fa1c6f6d013cc88c",
         "type": "inject",
         "z": "670db36a34c094fb",
@@ -612,7 +681,7 @@
         "id": "2f8f3a0e86e85ea0",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/base_launch.sh",
+        "command": "./aart25_artus/src/robot_bringup/scripts/base_launch.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -620,7 +689,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 530,
+        "x": 510,
         "y": 100,
         "wires": [
             [
@@ -768,7 +837,7 @@
         "id": "3fdbd81d6eea9c13",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/start_elevation_mapping.sh",
+        "command": "./aart25_artus/src/robot_bringup/scripts/start_elevation_mapping.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -776,7 +845,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 620,
+        "x": 600,
         "y": 240,
         "wires": [
             [
@@ -822,7 +891,7 @@
         "id": "d9d3edbf36645663",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/navigation_25D.sh",
+        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -830,7 +899,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 620,
+        "x": 590,
         "y": 360,
         "wires": [
             [
@@ -883,8 +952,13 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
+<<<<<<< Updated upstream
         "x": 630,
         "y": 800,
+=======
+        "x": 590,
+        "y": 660,
+>>>>>>> Stashed changes
         "wires": [
             [
                 "abb7ceec8b9ac643"
@@ -899,6 +973,7 @@
         "id": "dac785c89f1d1996",
         "type": "exec",
         "z": "670db36a34c094fb",
+        "d": true,
         "command": "ros2 topic echo --once /w200_0093/platform/bms/state",
         "addpay": "",
         "append": "",
@@ -942,7 +1017,8 @@
         "y": 1380,
         "wires": [
             [
-                "dac785c89f1d1996"
+                "dac785c89f1d1996",
+                "d5fe7d17021433a1"
             ]
         ]
     },
@@ -984,15 +1060,10 @@
             [
                 "8aef7ba57e64c6b4",
                 "c50ff8a9741b8323",
-                "1a4c70ad264b040d",
-                "f1eb8e0b7c358918",
-                "eec747f55ce95640",
-                "e355344e8ccc1fd0"
+                "1a4c70ad264b040d"
             ],
             [],
-            [
-                "ab102314b2c57e71"
-            ]
+            []
         ]
     },
     {
@@ -1000,7 +1071,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 15",
-        "func": "try{\n  const raw = msg.payload;\n\n  if(raw.startsWith(\"code: 15\")) {\n    msg.payload = \"ERROR\"\n  }\n  const topic = \"/livox/lidar_192_168_100_116\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n\n  if(raw.startsWith(\"code: 15\")) {\n    msg.payload = \"ERROR\"\n  }\n  const topic = \"/livox/lidar_192_168_101_104\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1049,7 +1120,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 16",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_100_115\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_101_103\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1356,7 +1427,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Rear Livox: ",
+        "label": "Bottom Livox: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1364,7 +1435,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1110,
+        "x": 1120,
         "y": 1500,
         "wires": []
     },
@@ -1901,7 +1972,7 @@
         "id": "9b4d53acb9d788f6",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/start_waypoint_handler.sh",
+        "command": "./aart25_artus/src/robot_bringup/scripts/start_waypoint_handler.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1909,7 +1980,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 630,
+        "x": 610,
         "y": 1760,
         "wires": [
             [
@@ -2040,6 +2111,7 @@
         ]
     },
     {
+<<<<<<< Updated upstream
         "id": "434233cd6a27d0b0",
         "type": "exec",
         "z": "a1c3ab294062a9b3",
@@ -2174,6 +2246,21 @@
         "name": "",
         "x": 670,
         "y": 80,
+=======
+        "id": "40311d9735e870c1",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "source /home/robolab/aart25_artus/install/setup.bash && ros2 topic echo --once /fixposition/odometry_llh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 620,
+        "y": 1980,
+>>>>>>> Stashed changes
         "wires": [
             [
                 "66b413c7668f8b77"
@@ -2185,6 +2272,7 @@
         ]
     },
     {
+<<<<<<< Updated upstream
         "id": "66b413c7668f8b77",
         "type": "function",
         "z": "a1c3ab294062a9b3",
@@ -2198,6 +2286,50 @@
         "libs": [],
         "x": 950,
         "y": 80,
+=======
+        "id": "b4e53fd1e559af9b",
+        "type": "ui_text",
+        "z": "670db36a34c094fb",
+        "group": "a7731543c6c9a013",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fixposition:  ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1310,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "4d6dafd737197cb5",
+        "type": "ui_button",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "a7731543c6c9a013",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Restart daemon",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 2360,
+>>>>>>> Stashed changes
         "wires": [
             [
                 "e5713fc7f15ce31e",
@@ -2257,7 +2389,33 @@
         ]
     },
     {
+<<<<<<< Updated upstream
         "id": "056dfa0b382931ad",
+=======
+        "id": "d5fe7d17021433a1",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 topic echo --once /battery_state",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 1320,
+        "wires": [
+            [
+                "6cedd1903878e499"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "434233cd6a27d0b0",
+>>>>>>> Stashed changes
         "type": "exec",
         "z": "a1c3ab294062a9b3",
         "command": "rosnode kill /bag_record",
@@ -2631,6 +2789,201 @@
         "y": 160,
         "wires": [
             [
+<<<<<<< Updated upstream
+=======
+                "192a09ad63615a72"
+            ]
+        ]
+    },
+    {
+        "id": "22fba74d4f692b26",
+        "type": "ui_toast",
+        "z": "bdf36601da685392",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 980,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f83f7c257622f629",
+        "type": "ui_button",
+        "z": "bdf36601da685392",
+        "name": "Start Recording",
+        "group": "a6c7888adc05a60d",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Record Sensors",
+        "tooltip": "Starts recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "b0cfcf373fc02398"
+            ]
+        ]
+    },
+    {
+        "id": "b0cfcf373fc02398",
+        "type": "function",
+        "z": "bdf36601da685392",
+        "name": "Start Recording",
+        "func": "let topics = \"/front_camera/rgb/camera_info \\\n    /front_camera/rgb/image_raw \\\n    /livox/imu_192_168_101_103 \\\n    /livox/imu_192_168_101_104 \\\n    /livox/lidar_192_168_101_103 \\\n    /livox/lidar_192_168_101_104 \\\n    /robot_description \\\n    /tf \\\n    /tf_static \\\n    /fixposition/odometry_smooth \\\n    /fixposition/odometry_llh \\\n    /fixposition/odometry_enu\";\n\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_artus/install/setup.bash && ros2 bag record ${topics} -o ${bagPath}\"`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "3f32244ee77a9dbb"
+            ]
+        ]
+    },
+    {
+        "id": "3f32244ee77a9dbb",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Start Recording",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ],
+            [
+                "192a09ad63615a72"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0e46a5312b252053",
+        "type": "ui_button",
+        "z": "bdf36601da685392",
+        "name": "Stop Recording",
+        "group": "a6c7888adc05a60d",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "Stops recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "e507b6020dce1a09"
+            ]
+        ]
+    },
+    {
+        "id": "e507b6020dce1a09",
+        "type": "function",
+        "z": "bdf36601da685392",
+        "name": "Stop Recording",
+        "func": "msg.payload = \"pkill -f 'ros2 bag record'\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "bbddd03cb2d7fc08"
+            ]
+        ]
+    },
+    {
+        "id": "bbddd03cb2d7fc08",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Stop Recording",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ],
+            [
+                "22fba74d4f692b26"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7ba36b7272662f47",
+        "type": "inject",
+        "z": "f69bae880fbb51b3",
+        "name": "Setup Network",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+>>>>>>> Stashed changes
                 "da251d8e5e9a80cc"
             ]
         ]
@@ -2754,7 +3107,8 @@
             [
                 "46732701c615247c",
                 "e85ccc599bd31e09",
-                "5c1d2194c50c7fff"
+                "5c1d2194c50c7fff",
+                "4598687faa335cc6"
             ]
         ]
     },
@@ -2941,6 +3295,26 @@
             [
                 "e0720bb2503f52f8"
             ]
+        ]
+    },
+    {
+        "id": "4598687faa335cc6",
+        "type": "exec",
+        "z": "77a5f43363216f4f",
+        "command": "mkdir ~/bags",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [],
+            [],
+            []
         ]
     },
     {
@@ -3563,6 +3937,63 @@
         "wires": []
     },
     {
+<<<<<<< Updated upstream
+=======
+        "id": "38a674bf5747b632",
+        "type": "debug",
+        "z": "5a08227995dbfc1f",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "225243e7035a0b49",
+        "type": "exec",
+        "z": "5a08227995dbfc1f",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5c4b4bf77968618e",
+        "type": "debug",
+        "z": "5a08227995dbfc1f",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 320,
+        "wires": []
+    },
+    {
+>>>>>>> Stashed changes
         "id": "8aec56a96c2a710f",
         "type": "debug",
         "z": "51781a72170cabab",
@@ -3971,7 +4402,7 @@
         "type": "function",
         "z": "521389ba55a86ab2",
         "name": "function 7",
-        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    return null;\n}\n\nif(msg.topic === \"distance\") {\n    context.set(\"distance\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    var distance = context.get(\"distance\");\n    msg.payload = \"tmux send-keys -t waypoint_handler:logging.0 \\\" ros2 run nav2_gps_waypoint_follower_demo gps_waypoint_logger ~/waypoints/\" + filename + \" \" + distance + \"\\\"\" + \" C-m\";\n    return msg;\n}\nreturn null;\n",
+        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    return null;\n}\n\nif(msg.topic === \"distance\") {\n    context.set(\"distance\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    var distance = context.get(\"distance\");\n    msg.payload = \"tmux send-keys -t waypoint_handler:logging.0 \\\" ros2 run waypoint_tools gps_waypoint_logger ~/waypoints/\" + filename + \" \" + distance + \"\\\"\" + \" C-m\";\n    return msg;\n}\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4173,7 +4604,7 @@
         "type": "function",
         "z": "521389ba55a86ab2",
         "name": "function 9",
-        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    flow.set(\"current_waypoints_file\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    msg.payload = \"tmux send-keys -t waypoint_handler:play.0 \\\"ros2 run nav2_gps_waypoint_follower_demo logged_waypoint_follower \" + filename + \" \" + \"\\\"\" + \" C-m\";\n    return msg;\n}\nreturn null;",
+        "func": "if(msg.topic === \"filename\") {\n    context.set(\"filename\", msg.payload);\n    flow.set(\"current_waypoints_file\", msg.payload);\n    return null;\n}\n\nif (msg.topic === \"button\") {\n    var filename = context.get(\"filename\");\n    msg.payload = \"tmux send-keys -t waypoint_handler:play.0 \\\"ros2 run waypoint_tools logged_waypoint_follower \" + filename + \" \" + \"\\\"\" + \" C-m\";\n    return msg;\n}\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5364,7 +5795,7 @@
         "type": "function",
         "z": "784ec6d0da48b0c8",
         "name": "Start Recording",
-        "func": "const topics = flow.get(\"selected_topics\");\nif (!topics || topics.length === 0) return null;\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 bag record ${topics.join(' ')} -o ${bagPath}\"`;\nreturn msg;",
+        "func": "const topics = flow.get(\"selected_topics\");\nif (!topics || topics.length === 0) return null;\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_artus/install/setup.bash && ros2 bag record ${topics.join(' ')} -o ${bagPath}\"`;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -5571,7 +6002,7 @@
         "id": "c59429df7ae10466",
         "type": "exec",
         "z": "784ec6d0da48b0c8",
-        "command": "source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 topic list",
+        "command": "source /home/robolab/aart25_artus/install/setup.bash && ros2 topic list",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -5579,7 +6010,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 690,
+        "x": 670,
         "y": 640,
         "wires": [
             [
