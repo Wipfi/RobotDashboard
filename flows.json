@@ -19,7 +19,7 @@
         "id": "bdf36601da685392",
         "type": "tab",
         "label": "DataRecordingRos2",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -75,6 +75,14 @@
         "id": "521389ba55a86ab2",
         "type": "tab",
         "label": "Waypoints",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "784ec6d0da48b0c8",
+        "type": "tab",
+        "label": "Bag Recorder",
         "disabled": false,
         "info": "",
         "env": []
@@ -453,17 +461,6 @@
         "className": ""
     },
     {
-        "id": "5e35405019c6b844",
-        "type": "ui_group",
-        "name": "Zico Test",
-        "tab": "79e30130c0c3e81d",
-        "order": 7,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "ae47e4ec0f9e2a1b",
         "type": "ui_group",
         "d": true,
@@ -614,6 +611,46 @@
         "id": "a3b1c2f6fd9a680b",
         "type": "dds-settings",
         "domain": "0"
+    },
+    {
+        "id": "a6c7888adc05a60d",
+        "type": "ui_group",
+        "name": "Bag Recording",
+        "tab": "79e30130c0c3e81d",
+        "order": 8,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5dd8c48abae50cb3",
+        "type": "ui_tab",
+        "name": "Bagfile Recorder",
+        "icon": "play_arrow",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1d47537c9cdfdc93",
+        "type": "ui_group",
+        "name": "Bag Recorder",
+        "tab": "5dd8c48abae50cb3",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c0c39b2fc2a2f2e",
+        "type": "ui_spacer",
+        "z": "bdf36601da685392",
+        "name": "",
+        "group": "a6c7888adc05a60d",
+        "order": 3,
+        "width": "6",
+        "height": "1"
     },
     {
         "id": "fa1c6f6d013cc88c",
@@ -858,7 +895,7 @@
         "id": "d9d3edbf36645663",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_os/src/robot_bringup/scripts/navigation_25D.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/navigation_25D.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -967,7 +1004,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "60",
+        "repeat": "10",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -1346,7 +1383,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1367,7 +1404,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 2,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1388,7 +1425,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1409,7 +1446,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1762,7 +1799,7 @@
         "width": "3",
         "height": "1",
         "passthru": false,
-        "label": "2.5D semantic",
+        "label": "2.5D PLANB",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -1772,7 +1809,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 150,
         "y": 500,
         "wires": [
             [
@@ -1834,7 +1871,7 @@
         "id": "681471dc16a24fa1",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/navigation_25D_semantic.sh",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/navigation_25D_PlanB.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1842,7 +1879,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 650,
+        "x": 640,
         "y": 440,
         "wires": [
             [
@@ -2140,7 +2177,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 4,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2161,7 +2198,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 4,
+        "order": 8,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2182,7 +2219,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 4,
+        "order": 9,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2261,8 +2298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 1940,
+        "x": 1150,
+        "y": 1980,
         "wires": [
             [
                 "b4e53fd1e559af9b"
@@ -2274,7 +2311,7 @@
         "type": "ui_text",
         "z": "670db36a34c094fb",
         "group": "a7731543c6c9a013",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2286,8 +2323,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1270,
-        "y": 1960,
+        "x": 1310,
+        "y": 2000,
         "wires": []
     },
     {
@@ -2315,6 +2352,75 @@
                 "b9b0ee4b8219233c"
             ]
         ]
+    },
+    {
+        "id": "4d6dafd737197cb5",
+        "type": "ui_button",
+        "z": "670db36a34c094fb",
+        "name": "",
+        "group": "a7731543c6c9a013",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Restart daemon",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 2360,
+        "wires": [
+            [
+                "810880121b7da8b5"
+            ]
+        ]
+    },
+    {
+        "id": "810880121b7da8b5",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 daemon stop && sleep 1 && ros2 daemon start",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 2360,
+        "wires": [
+            [
+                "56bb72da8cc4b8a6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "56bb72da8cc4b8a6",
+        "type": "ui_toast",
+        "z": "670db36a34c094fb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 920,
+        "y": 2360,
+        "wires": []
     },
     {
         "id": "434233cd6a27d0b0",
@@ -2880,6 +2986,273 @@
         "x": 1270,
         "y": 40,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd69fa8d86177a42",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "./aart25_warthog_ws/src/robot_bringup/scripts/record.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "192a09ad63615a72",
+        "type": "ui_text",
+        "z": "bdf36601da685392",
+        "group": "a6c7888adc05a60d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1150,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "79b6f7aa53d557b3",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "tmux kill-session -t recorder",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [],
+            [
+                "22fba74d4f692b26"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9c0b604985d9ca90",
+        "type": "inject",
+        "z": "bdf36601da685392",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ]
+        ]
+    },
+    {
+        "id": "ddb148379a130955",
+        "type": "debug",
+        "z": "bdf36601da685392",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "22fba74d4f692b26",
+        "type": "ui_toast",
+        "z": "bdf36601da685392",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1280,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f83f7c257622f629",
+        "type": "ui_button",
+        "z": "bdf36601da685392",
+        "name": "Start Recording",
+        "group": "a6c7888adc05a60d",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Record Sensors",
+        "tooltip": "Starts recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "b0cfcf373fc02398"
+            ]
+        ]
+    },
+    {
+        "id": "b0cfcf373fc02398",
+        "type": "function",
+        "z": "bdf36601da685392",
+        "name": "Start Recording",
+        "func": "let topics = \"/front_camera/rgb/camera_info \\\n    /front_camera/rgb/image_raw \\\n    /front_os/imu \\\n    /front_os/points \\\n    /livox/imu_192_168_100_115 \\\n    /livox/imu_192_168_100_116 \\\n    /livox/lidar_192_168_100_115 \\\n    /livox/lidar_192_168_100_116 \\\n    /rear_camera/rgb/camera_info \\\n    /rear_camera/rgb/image_raw \\\n    /robot_description \\\n    /tf \\\n    /tf_static \\\n    /top_os/imu \\\n    /top_os/points \\\n    /fixposition/odometry_smooth \\\n    /fixposition/odometry_llh \\\n    /fixposition/odometry_enu\";\n\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 bag record ${topics} -o ${bagPath}\"`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 340,
+        "wires": [
+            [
+                "3f32244ee77a9dbb"
+            ]
+        ]
+    },
+    {
+        "id": "3f32244ee77a9dbb",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Start Recording",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ],
+            [
+                "192a09ad63615a72"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0e46a5312b252053",
+        "type": "ui_button",
+        "z": "bdf36601da685392",
+        "name": "Stop Recording",
+        "group": "a6c7888adc05a60d",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "Stops recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "e507b6020dce1a09"
+            ]
+        ]
+    },
+    {
+        "id": "e507b6020dce1a09",
+        "type": "function",
+        "z": "bdf36601da685392",
+        "name": "Stop Recording",
+        "func": "msg.payload = \"pkill -f 'ros2 bag record'\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "bbddd03cb2d7fc08"
+            ]
+        ]
+    },
+    {
+        "id": "bbddd03cb2d7fc08",
+        "type": "exec",
+        "z": "bdf36601da685392",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Stop Recording",
+        "x": 560,
+        "y": 460,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ],
+            [
+                "22fba74d4f692b26"
+            ],
             []
         ]
     },
@@ -5013,6 +5386,360 @@
         "wires": [
             [
                 "5ad3fad24718dcb9"
+            ]
+        ]
+    },
+    {
+        "id": "6630c0c09f86e065",
+        "type": "ui_button",
+        "z": "784ec6d0da48b0c8",
+        "name": "Start Recording",
+        "group": "1d47537c9cdfdc93",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "Starts recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "a9d5b8e5d5c8b8a1"
+            ]
+        ]
+    },
+    {
+        "id": "a9d5b8e5d5c8b8a1",
+        "type": "function",
+        "z": "784ec6d0da48b0c8",
+        "name": "Start Recording",
+        "func": "const topics = flow.get(\"selected_topics\");\nif (!topics || topics.length === 0) return null;\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 bag record ${topics.join(' ')} -o ${bagPath}\"`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "d7e0b8e9c8e1f2d3"
+            ]
+        ]
+    },
+    {
+        "id": "d7e0b8e9c8e1f2d3",
+        "type": "exec",
+        "z": "784ec6d0da48b0c8",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Start Recording",
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "d1134f4aa866a63c"
+            ],
+            [
+                "e99fcdab5d3d49f2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d1134f4aa866a63c",
+        "type": "ui_text",
+        "z": "784ec6d0da48b0c8",
+        "group": "1d47537c9cdfdc93",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "Recording Status",
+        "label": "Recording Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ba14c354c26c6462",
+        "type": "ui_button",
+        "z": "784ec6d0da48b0c8",
+        "name": "Stop Recording",
+        "group": "1d47537c9cdfdc93",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "Stops recording bag file",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "stop",
+        "payloadType": "str",
+        "topic": "bag_record",
+        "topicType": "str",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "b9d5b8e5d5c8b8a1"
+            ]
+        ]
+    },
+    {
+        "id": "b9d5b8e5d5c8b8a1",
+        "type": "function",
+        "z": "784ec6d0da48b0c8",
+        "name": "Stop Recording",
+        "func": "msg.payload = \"pkill -f 'ros2 bag record'\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "e7e0b8e9c8e1f2d3"
+            ]
+        ]
+    },
+    {
+        "id": "e7e0b8e9c8e1f2d3",
+        "type": "exec",
+        "z": "784ec6d0da48b0c8",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Stop Recording",
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "d1134f4aa866a63c"
+            ],
+            [
+                "e99fcdab5d3d49f2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c2c0004a4ea3f83b",
+        "type": "ui_template",
+        "z": "784ec6d0da48b0c8",
+        "group": "1d47537c9cdfdc93",
+        "name": "Select Topics",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "format": "<div style=\"padding: 10px;\">\n  <h3>Select Topics to Record</h3>\n  <div ng-repeat=\"topic in topics track by $index\" style=\"margin-bottom: 5px;\">\n    <input type=\"checkbox\" id=\"topic-{{$index}}\" ng-model=\"topic.selected\" ng-change=\"update()\">\n    <label for=\"topic-{{$index}}\">{{topic.name}}</label>\n  </div>\n</div>\n\n<script>\n(function(scope) {\n  scope.$watch('msg.payload', function(payload) {\n    if (payload && payload.topics) {\n      scope.topics = payload.topics;\n    }\n  });\n\n  scope.update = function() {\n    const selected = (scope.topics || [])\n      .filter(t => t.selected)\n      .map(t => t.name);\n    scope.send({ payload: selected });\n  };\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "f9d5b8e5d5c8b8a1"
+            ]
+        ]
+    },
+    {
+        "id": "f9d5b8e5d5c8b8a1",
+        "type": "function",
+        "z": "784ec6d0da48b0c8",
+        "name": "Set Record Topics",
+        "func": "\nflow.set('selected_topics', msg.payload);\nmsg.payload = \"Topics to record: \" + msg.payload;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "d1134f4aa866a63c"
+            ]
+        ]
+    },
+    {
+        "id": "206a4d2b6909a7d4",
+        "type": "ui_button",
+        "z": "784ec6d0da48b0c8",
+        "name": "\tGet Topics",
+        "group": "1d47537c9cdfdc93",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "true",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "msg",
+        "x": 270,
+        "y": 640,
+        "wires": [
+            [
+                "c59429df7ae10466"
+            ]
+        ]
+    },
+    {
+        "id": "c59429df7ae10466",
+        "type": "exec",
+        "z": "784ec6d0da48b0c8",
+        "command": "source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 topic list",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 690,
+        "y": 640,
+        "wires": [
+            [
+                "c1ca77da5b8f159c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c1ca77da5b8f159c",
+        "type": "function",
+        "z": "784ec6d0da48b0c8",
+        "name": "function 1",
+        "func": "const topics = msg.payload.split('\\n').filter(t => t.trim() !== '');\nmsg.payload = { topics: topics.map(t => ({ name: t, selected: false })) };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 580,
+        "wires": [
+            [
+                "c2c0004a4ea3f83b"
+            ]
+        ]
+    },
+    {
+        "id": "3125a17387d714eb",
+        "type": "inject",
+        "z": "784ec6d0da48b0c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 560,
+        "wires": [
+            [
+                "c59429df7ae10466"
+            ]
+        ]
+    },
+    {
+        "id": "e99fcdab5d3d49f2",
+        "type": "ui_text",
+        "z": "784ec6d0da48b0c8",
+        "group": "1d47537c9cdfdc93",
+        "order": 6,
+        "width": "6",
+        "height": "10",
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d58efb2f21437365",
+        "type": "inject",
+        "z": "784ec6d0da48b0c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "e99fcdab5d3d49f2",
+                "d1134f4aa866a63c"
             ]
         ]
     }
