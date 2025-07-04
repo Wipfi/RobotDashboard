@@ -80,6 +80,22 @@
         "env": []
     },
     {
+        "id": "784ec6d0da48b0c8",
+        "type": "tab",
+        "label": "Bag Recorder",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5a03c82e98531a43",
+        "type": "tab",
+        "label": "Settings",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "56896a1642ce3eff",
         "type": "ros-server",
         "url": "ws://192.168.100.123:9090"
@@ -211,7 +227,7 @@
         "id": "594b20d02908301d",
         "type": "ui_link",
         "name": "Fixposition",
-        "link": "http://192.168.101.124",
+        "link": "http://191.168.100.124",
         "icon": "open_in_browser",
         "target": "newtab",
         "order": 10
@@ -220,7 +236,7 @@
         "id": "eacab13df10f768d",
         "type": "ui_link",
         "name": "Router",
-        "link": "http://192.168.101.2",
+        "link": "http://10.185.1.89",
         "icon": "open_in_browser",
         "target": "newtab",
         "order": 11
@@ -580,8 +596,6 @@
         "height": "1"
     },
     {
-<<<<<<< Updated upstream
-=======
         "id": "b48c705cd85f52f2",
         "type": "ui_spacer",
         "z": "670db36a34c094fb",
@@ -590,21 +604,6 @@
         "order": 4,
         "width": "6",
         "height": "1"
-    },
-    {
-        "id": "52e27f13724c695d",
-        "type": "dds-settings",
-        "domain": ""
-    },
-    {
-        "id": "7ecc019cfe4bfa6d",
-        "type": "dds-settings",
-        "domain": "0"
-    },
-    {
-        "id": "a3b1c2f6fd9a680b",
-        "type": "dds-settings",
-        "domain": "0"
     },
     {
         "id": "a6c7888adc05a60d",
@@ -648,7 +647,52 @@
         "height": "1"
     },
     {
->>>>>>> Stashed changes
+        "id": "52e27f13724c695d",
+        "type": "dds-settings",
+        "domain": ""
+    },
+    {
+        "id": "7ecc019cfe4bfa6d",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
+        "id": "a3b1c2f6fd9a680b",
+        "type": "dds-settings",
+        "domain": "0"
+    },
+    {
+        "id": "af4a8504d9d37d1a",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "dashboard",
+        "order": 12,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "13e23cd70b686f0e",
+        "type": "ui_group",
+        "name": "ENV variables",
+        "tab": "af4a8504d9d37d1a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2a53994c842a2f01",
+        "type": "ui_group",
+        "name": "SHUTDOWN",
+        "tab": "af4a8504d9d37d1a",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "fa1c6f6d013cc88c",
         "type": "inject",
         "z": "670db36a34c094fb",
@@ -681,7 +725,7 @@
         "id": "2f8f3a0e86e85ea0",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/base_launch.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/base_launch.sh\"",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -689,7 +733,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 510,
+        "x": 610,
         "y": 100,
         "wires": [
             [
@@ -837,7 +881,7 @@
         "id": "3fdbd81d6eea9c13",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_elevation_mapping.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/start_elevation_mapping.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -845,7 +889,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 600,
+        "x": 630,
         "y": 240,
         "wires": [
             [
@@ -891,7 +935,7 @@
         "id": "d9d3edbf36645663",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/navigation_25D.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -899,7 +943,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 590,
+        "x": 620,
         "y": 360,
         "wires": [
             [
@@ -944,7 +988,7 @@
         "id": "816a702f46dcf3b4",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_semantic.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/start_semantic.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -952,13 +996,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-<<<<<<< Updated upstream
-        "x": 630,
-        "y": 800,
-=======
-        "x": 590,
+        "x": 620,
         "y": 660,
->>>>>>> Stashed changes
         "wires": [
             [
                 "abb7ceec8b9ac643"
@@ -1071,7 +1110,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 15",
-        "func": "try{\n  const raw = msg.payload;\n\n  if(raw.startsWith(\"code: 15\")) {\n    msg.payload = \"ERROR\"\n  }\n  const topic = \"/livox/lidar_192_168_101_104\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n\n  if(raw.startsWith(\"code: 15\")) {\n    msg.payload = \"ERROR\"\n  }\n  const topic = \"/left_laser/lidar_points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1120,7 +1159,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 16",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/livox/lidar_192_168_101_103\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/right_laser/lidar_points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1140,7 +1179,7 @@
         "type": "function",
         "z": "670db36a34c094fb",
         "name": "function 17",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/front_camera/rgb/image_raw\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
+        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/front_zed/zed_node/rgb_raw/image_raw_color\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1406,7 +1445,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Front Livox: ",
+        "label": "Left Lidar: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1414,7 +1453,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1110,
+        "x": 1100,
         "y": 1460,
         "wires": []
     },
@@ -1427,7 +1466,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Bottom Livox: ",
+        "label": "Right Livox: ",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1435,7 +1474,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1120,
+        "x": 1110,
         "y": 1500,
         "wires": []
     },
@@ -1869,7 +1908,7 @@
         "id": "681471dc16a24fa1",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/navigation_25D_PlanB.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/navigation_25D_PlanB.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1877,7 +1916,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 620,
+        "x": 640,
         "y": 440,
         "wires": [
             [
@@ -1972,7 +2011,7 @@
         "id": "9b4d53acb9d788f6",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "./aart25_artus/src/robot_bringup/scripts/start_waypoint_handler.sh",
+        "command": "./aart25_mercator_ws/src/robot_bringup/scripts/start_waypoint_handler.sh",
         "addpay": "",
         "append": "",
         "useSpawn": "true",
@@ -1980,7 +2019,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 610,
+        "x": 630,
         "y": 1760,
         "wires": [
             [
@@ -2111,146 +2150,10 @@
         ]
     },
     {
-<<<<<<< Updated upstream
-        "id": "434233cd6a27d0b0",
-        "type": "exec",
-        "z": "a1c3ab294062a9b3",
-        "command": "ros2 topic list",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 550,
-        "y": 260,
-        "wires": [
-            [
-                "0d29bd3a0d533de1"
-            ],
-            [
-                "3f65d53e2b40bae6"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "0d29bd3a0d533de1",
-        "type": "function",
-        "z": "a1c3ab294062a9b3",
-        "name": "save elements to context",
-        "func": "var topics = msg.payload.split(/\\r?\\n|\\r|\\n/g);\nvar listOfObjects = [];\nvar listOfStrings = [];\n\ntopics.forEach(function (entry) {\n    var singleObj = {};\n    if(entry != \"\")\n    {\n        singleObj['topic'] = entry;\n        listOfObjects.push(singleObj);\n        listOfStrings.push(entry);\n    }\n});\n\nmsg.payload = listOfObjects;\n\nflow.set(\"TopicsToRecord\", listOfStrings);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 340,
-        "wires": [
-            [
-                "62fa13531a6a173d",
-                "98447aa5d40adb84"
-            ]
-        ]
-    },
-    {
-        "id": "cce4a04bbcca29aa",
-        "type": "debug",
-        "z": "a1c3ab294062a9b3",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "98447aa5d40adb84",
-        "type": "function",
-        "z": "a1c3ab294062a9b3",
-        "name": "get elements from context",
-        "func": "var topics = flow.get(\"TopicsToRecord\");\nvar listOfObjects = [];\n\ntopics.forEach(function (entry) {\n    var singleObj = {};\n    if(entry != \"\")\n    {\n        singleObj['topic'] = entry;\n        listOfObjects.push(singleObj);\n    }\n});\n\nmsg.payload = listOfObjects;\n\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1290,
-        "y": 360,
-        "wires": [
-            [
-                "46d45f97bdf14697"
-            ]
-        ]
-    },
-    {
-        "id": "eae494aa24725b7d",
-        "type": "function",
-        "z": "a1c3ab294062a9b3",
-        "name": "remove element",
-        "func": "var listOfStrings = flow.get(\"TopicsToRecord\")\n\nif(msg.payload != \"\")\n{\n    var index = listOfStrings.indexOf(msg.payload.topic);\n        if (index !== -1) \n        {  \n            listOfStrings.splice(index, 1);\n            msg.payload = listOfStrings\n            flow.set(\"TopicsToRecord\", listOfStrings)\n        }\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1200,
-        "y": 680,
-        "wires": [
-            [
-                "98447aa5d40adb84"
-            ]
-        ]
-    },
-    {
-        "id": "d64d324e7f083ea8",
-        "type": "function",
-        "z": "a1c3ab294062a9b3",
-        "name": "add allement if not exist",
-        "func": "var listOfStrings = flow.get(\"TopicsToRecord\")\n\nif(msg.payload.topic != \"\")\n{\n    var index = listOfStrings.indexOf(msg.payload.topic);\n        if (index == -1) \n        {  \n            listOfStrings.push(msg.payload.topic);\n            msg.payload = listOfStrings;\n            flow.set(\"TopicsToRecord\", listOfStrings);\n        }\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 560,
-        "wires": [
-            [
-                "98447aa5d40adb84"
-            ]
-        ]
-    },
-    {
-        "id": "318301edd71c00ad",
-        "type": "exec",
-        "z": "a1c3ab294062a9b3",
-        "command": "ls DataRecording",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 670,
-        "y": 80,
-=======
         "id": "40311d9735e870c1",
         "type": "exec",
         "z": "670db36a34c094fb",
-        "command": "source /home/robolab/aart25_artus/install/setup.bash && ros2 topic echo --once /fixposition/odometry_llh",
+        "command": "source aart25_mercator_ws/install/setup.bash && ros2 topic echo --once /fixposition/odometry_llh",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -2258,35 +2161,17 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 620,
+        "x": 600,
         "y": 1980,
->>>>>>> Stashed changes
         "wires": [
             [
-                "66b413c7668f8b77"
+                "e0d0f7b2321ae51c"
             ],
-            [
-                "3f65d53e2b40bae6"
-            ],
+            [],
             []
         ]
     },
     {
-<<<<<<< Updated upstream
-        "id": "66b413c7668f8b77",
-        "type": "function",
-        "z": "a1c3ab294062a9b3",
-        "name": "split",
-        "func": "var files = msg.payload.split(/\\r?\\n|\\r|\\n/g);\nvar listOfObjects = [];\n\nfiles.forEach(function (entry) {\n    var singleObj = {};\n    if(entry != \"\")\n    {\n        singleObj['file'] = entry;\n        listOfObjects.push(singleObj);\n    }\n});\n\nmsg.payload = listOfObjects;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 950,
-        "y": 80,
-=======
         "id": "b4e53fd1e559af9b",
         "type": "ui_text",
         "z": "670db36a34c094fb",
@@ -2304,7 +2189,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1310,
-        "y": 2000,
+        "y": 1980,
         "wires": []
     },
     {
@@ -2329,13 +2214,121 @@
         "topicType": "msg",
         "x": 200,
         "y": 2360,
->>>>>>> Stashed changes
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5fe7d17021433a1",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 topic echo --once /battery_state",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 510,
+        "y": 1320,
         "wires": [
             [
-                "e5713fc7f15ce31e",
-                "f490c4fed55f684b"
+                "6cedd1903878e499"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "151d253dbcced5e3",
+        "type": "inject",
+        "z": "670db36a34c094fb",
+        "name": "update exec",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1980,
+        "wires": [
+            [
+                "40311d9735e870c1"
             ]
         ]
+    },
+    {
+        "id": "e0d0f7b2321ae51c",
+        "type": "function",
+        "z": "670db36a34c094fb",
+        "name": "function 21",
+        "func": "try{\n    const match = msg.payload.match(/latitude:\\s*([^\\n\\r]+)/);\n    \n    if (match[1] != 0) {\n        msg.payload = \"fix ok\";\n        return msg;\n    }\n    else {\n        msg.payload = \"no fix\";\n        return msg;\n    }\n}\ncatch (err) {\n    msg.payload = \"no fix\"\n    return msg;\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 1980,
+        "wires": [
+            [
+                "b4e53fd1e559af9b"
+            ]
+        ]
+    },
+    {
+        "id": "810880121b7da8b5",
+        "type": "exec",
+        "z": "670db36a34c094fb",
+        "command": "ros2 daemon stop && sleep 1 && ros2 daemon start",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 2360,
+        "wires": [
+            [
+                "56bb72da8cc4b8a6"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "56bb72da8cc4b8a6",
+        "type": "ui_toast",
+        "z": "670db36a34c094fb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 920,
+        "y": 2360,
+        "wires": []
     },
     {
         "id": "3a45ae25354f6734",
@@ -2383,39 +2376,11 @@
             [
                 "3a45ae25354f6734"
             ],
-            [
-                "056dfa0b382931ad"
-            ]
-        ]
-    },
-    {
-<<<<<<< Updated upstream
-        "id": "056dfa0b382931ad",
-=======
-        "id": "d5fe7d17021433a1",
-        "type": "exec",
-        "z": "670db36a34c094fb",
-        "command": "ros2 topic echo --once /battery_state",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 510,
-        "y": 1320,
-        "wires": [
-            [
-                "6cedd1903878e499"
-            ],
-            [],
             []
         ]
     },
     {
         "id": "434233cd6a27d0b0",
->>>>>>> Stashed changes
         "type": "exec",
         "z": "a1c3ab294062a9b3",
         "command": "rosnode kill /bag_record",
@@ -2490,9 +2455,7 @@
         "x": 140,
         "y": 140,
         "wires": [
-            [
-                "318301edd71c00ad"
-            ]
+            []
         ]
     },
     {
@@ -2639,8 +2602,7 @@
         "y": 240,
         "wires": [
             [
-                "434233cd6a27d0b0",
-                "318301edd71c00ad"
+                "434233cd6a27d0b0"
             ]
         ]
     },
@@ -2667,9 +2629,7 @@
         "x": 140,
         "y": 80,
         "wires": [
-            [
-                "318301edd71c00ad"
-            ]
+            []
         ]
     },
     {
@@ -2698,10 +2658,7 @@
         "x": 330,
         "y": 560,
         "wires": [
-            [
-                "d64d324e7f083ea8",
-                "cce4a04bbcca29aa"
-            ]
+            []
         ]
     },
     {
@@ -2730,9 +2687,7 @@
         "x": 1210,
         "y": 600,
         "wires": [
-            [
-                "eae494aa24725b7d"
-            ]
+            []
         ]
     },
     {
@@ -2762,37 +2717,6 @@
         "y": 40,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "7ba36b7272662f47",
-        "type": "inject",
-        "z": "f69bae880fbb51b3",
-        "name": "Setup Network",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-<<<<<<< Updated upstream
-=======
-                "192a09ad63615a72"
-            ]
         ]
     },
     {
@@ -2847,7 +2771,7 @@
         "type": "function",
         "z": "bdf36601da685392",
         "name": "Start Recording",
-        "func": "let topics = \"/front_camera/rgb/camera_info \\\n    /front_camera/rgb/image_raw \\\n    /livox/imu_192_168_101_103 \\\n    /livox/imu_192_168_101_104 \\\n    /livox/lidar_192_168_101_103 \\\n    /livox/lidar_192_168_101_104 \\\n    /robot_description \\\n    /tf \\\n    /tf_static \\\n    /fixposition/odometry_smooth \\\n    /fixposition/odometry_llh \\\n    /fixposition/odometry_enu\";\n\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_artus/install/setup.bash && ros2 bag record ${topics} -o ${bagPath}\"`;\nreturn msg;",
+        "func": "let topics = \"/front_zed/zed_node/rgb_raw/camera_info  \\\n    /front_zed/zed_node/rgb_raw/image_raw_color \\\n    /left_laser/lidar_imu \\\n    /left_laser/lidar_points \\\n    /right_laser/lidar_imu \\\n    /right_laser/lidar_points \\\n    /robot_description \\\n    /tf \\\n    /tf_static \\\n    /fixposition/odometry_smooth \\\n    /fixposition/odometry_llh \\\n    /fixposition/odometry_enu\";\n\nvar d=new Date();\n\nconst bagPath = `/home/tedusar/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/tedusar/aart25_mercator_ws/install/setup.bash && ros2 bag record ${topics} -o ${bagPath}\"`;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2959,6 +2883,52 @@
         ]
     },
     {
+        "id": "192a09ad63615a72",
+        "type": "ui_text",
+        "z": "bdf36601da685392",
+        "group": "a6c7888adc05a60d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1150,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9c0b604985d9ca90",
+        "type": "inject",
+        "z": "bdf36601da685392",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "192a09ad63615a72"
+            ]
+        ]
+    },
+    {
         "id": "7ba36b7272662f47",
         "type": "inject",
         "z": "f69bae880fbb51b3",
@@ -2982,10 +2952,7 @@
         "x": 180,
         "y": 160,
         "wires": [
-            [
->>>>>>> Stashed changes
-                "da251d8e5e9a80cc"
-            ]
+            []
         ]
     },
     {
@@ -3937,8 +3904,6 @@
         "wires": []
     },
     {
-<<<<<<< Updated upstream
-=======
         "id": "38a674bf5747b632",
         "type": "debug",
         "z": "5a08227995dbfc1f",
@@ -3993,7 +3958,57 @@
         "wires": []
     },
     {
->>>>>>> Stashed changes
+        "id": "74abae0164d5dac5",
+        "type": "Subscriber",
+        "z": "5a08227995dbfc1f",
+        "topic": "/top_os/points",
+        "domain": "a3b1c2f6fd9a680b",
+        "props": [],
+        "selectedtype": "sensor_msgs/PointCloud2",
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "5c4b4bf77968618e"
+            ]
+        ]
+    },
+    {
+        "id": "db8d35826847aa65",
+        "type": "ROS2 Type",
+        "z": "5a08227995dbfc1f",
+        "ros2pkg": "sensor_msgs",
+        "ros2message": "PointCloud2",
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "74abae0164d5dac5"
+            ]
+        ]
+    },
+    {
+        "id": "bbc47933b71d16d9",
+        "type": "ROS2 Inject",
+        "z": "5a08227995dbfc1f",
+        "types": [],
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "ros2type": "tf2_msgs/TFMessage",
+        "idltype": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "db8d35826847aa65"
+            ]
+        ]
+    },
+    {
         "id": "8aec56a96c2a710f",
         "type": "debug",
         "z": "51781a72170cabab",
@@ -5066,703 +5081,6 @@
         ]
     },
     {
-        "id": "784ec6d0da48b0c8",
-        "type": "tab",
-        "label": "Bag Recorder",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "b48c705cd85f52f2",
-        "type": "ui_spacer",
-        "z": "670db36a34c094fb",
-        "name": "",
-        "group": "b2d6ce9d98dc36fb",
-        "order": 4,
-        "width": "6",
-        "height": "1"
-    },
-    {
-        "id": "52e27f13724c695d",
-        "type": "dds-settings",
-        "domain": ""
-    },
-    {
-        "id": "7ecc019cfe4bfa6d",
-        "type": "dds-settings",
-        "domain": "0"
-    },
-    {
-        "id": "a3b1c2f6fd9a680b",
-        "type": "dds-settings",
-        "domain": "0"
-    },
-    {
-        "id": "a6c7888adc05a60d",
-        "type": "ui_group",
-        "name": "Bag Recording",
-        "tab": "79e30130c0c3e81d",
-        "order": 8,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "5dd8c48abae50cb3",
-        "type": "ui_tab",
-        "name": "Bagfile Recorder",
-        "icon": "play_arrow",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "1d47537c9cdfdc93",
-        "type": "ui_group",
-        "name": "Bag Recorder",
-        "tab": "5dd8c48abae50cb3",
-        "order": 2,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "9c0c39b2fc2a2f2e",
-        "type": "ui_spacer",
-        "z": "bdf36601da685392",
-        "name": "",
-        "group": "a6c7888adc05a60d",
-        "order": 3,
-        "width": "6",
-        "height": "1"
-    },
-    {
-        "id": "f1eb8e0b7c358918",
-        "type": "function",
-        "z": "670db36a34c094fb",
-        "name": "function 18",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/rear_camera/rgb/image_raw\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 1580,
-        "wires": [
-            [
-                "95152db1aaebb0f5"
-            ]
-        ]
-    },
-    {
-        "id": "eec747f55ce95640",
-        "type": "function",
-        "z": "670db36a34c094fb",
-        "name": "function 19",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/top_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 1620,
-        "wires": [
-            [
-                "99eb7a98d21f6f5b"
-            ]
-        ]
-    },
-    {
-        "id": "e355344e8ccc1fd0",
-        "type": "function",
-        "z": "670db36a34c094fb",
-        "name": "function 20",
-        "func": "try{\n  const raw = msg.payload;\n  const topic = \"/front_os/points\";\n\n  const escaped = topic.replace(/\\//g, '\\\\/');\n\n  const regex = new RegExp(`\"${escaped}\"\\\\s*:\\\\s*(\\\\d+)`);\n  const match = raw.match(regex);\n\n  if (parseInt(match[1]) === 1) {\n    msg.payload = \"OK\"\n  }\n  else {\n    msg.payload = \"DEAD\"\n  }\n} catch (err) {\n    node.error(\"Failed to parse JSON: \" + err.message);\n    msg.payload = \"ERROR\";\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 1660,
-        "wires": [
-            [
-                "86706e9506e85dfa"
-            ]
-        ]
-    },
-    {
-        "id": "99eb7a98d21f6f5b",
-        "type": "ui_text",
-        "z": "670db36a34c094fb",
-        "group": "a7731543c6c9a013",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Top Ouster: ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1110,
-        "y": 1620,
-        "wires": []
-    },
-    {
-        "id": "86706e9506e85dfa",
-        "type": "ui_text",
-        "z": "670db36a34c094fb",
-        "group": "a7731543c6c9a013",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Front Ouster: ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1110,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "95152db1aaebb0f5",
-        "type": "ui_text",
-        "z": "670db36a34c094fb",
-        "group": "a7731543c6c9a013",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Rear Camera: ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1120,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "40311d9735e870c1",
-        "type": "exec",
-        "z": "670db36a34c094fb",
-        "command": "source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 topic echo --once /fixposition/odometry_llh",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "4",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 640,
-        "y": 1980,
-        "wires": [
-            [
-                "e0d0f7b2321ae51c"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "151d253dbcced5e3",
-        "type": "inject",
-        "z": "670db36a34c094fb",
-        "name": "update exec",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1980,
-        "wires": [
-            [
-                "40311d9735e870c1"
-            ]
-        ]
-    },
-    {
-        "id": "e0d0f7b2321ae51c",
-        "type": "function",
-        "z": "670db36a34c094fb",
-        "name": "function 21",
-        "func": "try{\n    const match = msg.payload.match(/latitude:\\s*([^\\n\\r]+)/);\n    \n    if (match[1] != 0) {\n        msg.payload = \"fix ok\";\n        return msg;\n    }\n    else {\n        msg.payload = \"no fix\";\n        return msg;\n    }\n}\ncatch (err) {\n    msg.payload = \"no fix\"\n    return msg;\n}\n\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1150,
-        "y": 1980,
-        "wires": [
-            [
-                "b4e53fd1e559af9b"
-            ]
-        ]
-    },
-    {
-        "id": "b4e53fd1e559af9b",
-        "type": "ui_text",
-        "z": "670db36a34c094fb",
-        "group": "a7731543c6c9a013",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Fixposition:  ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1310,
-        "y": 2000,
-        "wires": []
-    },
-    {
-        "id": "ab102314b2c57e71",
-        "type": "function",
-        "z": "670db36a34c094fb",
-        "d": true,
-        "name": "function 22",
-        "func": "if(msg.payload.code === 15) {\n    msg.payload = \"DEAD\";\n    return msg;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 770,
-        "y": 1700,
-        "wires": [
-            [
-                "86706e9506e85dfa",
-                "99eb7a98d21f6f5b",
-                "95152db1aaebb0f5",
-                "3fcc1472b0d8b5e8",
-                "c6e7a4c91336b6e1",
-                "b9b0ee4b8219233c"
-            ]
-        ]
-    },
-    {
-        "id": "4d6dafd737197cb5",
-        "type": "ui_button",
-        "z": "670db36a34c094fb",
-        "name": "",
-        "group": "a7731543c6c9a013",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Restart daemon",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 200,
-        "y": 2360,
-        "wires": [
-            [
-                "810880121b7da8b5"
-            ]
-        ]
-    },
-    {
-        "id": "810880121b7da8b5",
-        "type": "exec",
-        "z": "670db36a34c094fb",
-        "command": "ros2 daemon stop && sleep 1 && ros2 daemon start",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 550,
-        "y": 2360,
-        "wires": [
-            [
-                "56bb72da8cc4b8a6"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "56bb72da8cc4b8a6",
-        "type": "ui_toast",
-        "z": "670db36a34c094fb",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 920,
-        "y": 2360,
-        "wires": []
-    },
-    {
-        "id": "192a09ad63615a72",
-        "type": "ui_text",
-        "z": "bdf36601da685392",
-        "group": "a6c7888adc05a60d",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1150,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "9c0b604985d9ca90",
-        "type": "inject",
-        "z": "bdf36601da685392",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 1070,
-        "y": 220,
-        "wires": [
-            [
-                "192a09ad63615a72"
-            ]
-        ]
-    },
-    {
-        "id": "22fba74d4f692b26",
-        "type": "ui_toast",
-        "z": "bdf36601da685392",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 980,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "f83f7c257622f629",
-        "type": "ui_button",
-        "z": "bdf36601da685392",
-        "name": "Start Recording",
-        "group": "a6c7888adc05a60d",
-        "order": 1,
-        "width": "0",
-        "height": "0",
-        "passthru": false,
-        "label": "Record Sensors",
-        "tooltip": "Starts recording bag file",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "start",
-        "payloadType": "str",
-        "topic": "bag_record",
-        "topicType": "str",
-        "x": 160,
-        "y": 340,
-        "wires": [
-            [
-                "b0cfcf373fc02398"
-            ]
-        ]
-    },
-    {
-        "id": "b0cfcf373fc02398",
-        "type": "function",
-        "z": "bdf36601da685392",
-        "name": "Start Recording",
-        "func": "let topics = \"/front_camera/rgb/camera_info \\\n    /front_camera/rgb/image_raw \\\n    /front_os/imu \\\n    /front_os/points \\\n    /livox/imu_192_168_100_115 \\\n    /livox/imu_192_168_100_116 \\\n    /livox/lidar_192_168_100_115 \\\n    /livox/lidar_192_168_100_116 \\\n    /rear_camera/rgb/camera_info \\\n    /rear_camera/rgb/image_raw \\\n    /robot_description \\\n    /tf \\\n    /tf_static \\\n    /top_os/imu \\\n    /top_os/points \\\n    /fixposition/odometry_smooth \\\n    /fixposition/odometry_llh \\\n    /fixposition/odometry_enu\";\n\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_warthog_ws/install/setup.bash && ros2 bag record ${topics} -o ${bagPath}\"`;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 340,
-        "wires": [
-            [
-                "3f32244ee77a9dbb"
-            ]
-        ]
-    },
-    {
-        "id": "3f32244ee77a9dbb",
-        "type": "exec",
-        "z": "bdf36601da685392",
-        "command": "",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "true",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Start Recording",
-        "x": 560,
-        "y": 340,
-        "wires": [
-            [
-                "192a09ad63615a72"
-            ],
-            [
-                "192a09ad63615a72"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "0e46a5312b252053",
-        "type": "ui_button",
-        "z": "bdf36601da685392",
-        "name": "Stop Recording",
-        "group": "a6c7888adc05a60d",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "passthru": false,
-        "label": "Stop",
-        "tooltip": "Stops recording bag file",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "stop",
-        "payloadType": "str",
-        "topic": "bag_record",
-        "topicType": "str",
-        "x": 160,
-        "y": 460,
-        "wires": [
-            [
-                "e507b6020dce1a09"
-            ]
-        ]
-    },
-    {
-        "id": "e507b6020dce1a09",
-        "type": "function",
-        "z": "bdf36601da685392",
-        "name": "Stop Recording",
-        "func": "msg.payload = \"pkill -f 'ros2 bag record'\";\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 460,
-        "wires": [
-            [
-                "bbddd03cb2d7fc08"
-            ]
-        ]
-    },
-    {
-        "id": "bbddd03cb2d7fc08",
-        "type": "exec",
-        "z": "bdf36601da685392",
-        "command": "",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "Stop Recording",
-        "x": 560,
-        "y": 460,
-        "wires": [
-            [
-                "192a09ad63615a72"
-            ],
-            [
-                "22fba74d4f692b26"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "74abae0164d5dac5",
-        "type": "Subscriber",
-        "z": "5a08227995dbfc1f",
-        "topic": "/top_os/points",
-        "domain": "a3b1c2f6fd9a680b",
-        "props": [],
-        "selectedtype": "sensor_msgs/PointCloud2",
-        "x": 990,
-        "y": 320,
-        "wires": [
-            [
-                "5c4b4bf77968618e"
-            ]
-        ]
-    },
-    {
-        "id": "5c4b4bf77968618e",
-        "type": "debug",
-        "z": "5a08227995dbfc1f",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "db8d35826847aa65",
-        "type": "ROS2 Type",
-        "z": "5a08227995dbfc1f",
-        "ros2pkg": "sensor_msgs",
-        "ros2message": "PointCloud2",
-        "x": 810,
-        "y": 280,
-        "wires": [
-            [
-                "74abae0164d5dac5"
-            ]
-        ]
-    },
-    {
-        "id": "bbc47933b71d16d9",
-        "type": "ROS2 Inject",
-        "z": "5a08227995dbfc1f",
-        "types": [],
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "ros2type": "tf2_msgs/TFMessage",
-        "idltype": "",
-        "x": 590,
-        "y": 220,
-        "wires": [
-            [
-                "db8d35826847aa65"
-            ]
-        ]
-    },
-    {
-        "id": "38a674bf5747b632",
-        "type": "debug",
-        "z": "5a08227995dbfc1f",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "225243e7035a0b49",
-        "type": "exec",
-        "z": "5a08227995dbfc1f",
-        "command": "",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 790,
-        "y": 440,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "6630c0c09f86e065",
         "type": "ui_button",
         "z": "784ec6d0da48b0c8",
@@ -5795,7 +5113,7 @@
         "type": "function",
         "z": "784ec6d0da48b0c8",
         "name": "Start Recording",
-        "func": "const topics = flow.get(\"selected_topics\");\nif (!topics || topics.length === 0) return null;\nvar d=new Date();\n\nconst bagPath = `/home/robolab/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/robolab/aart25_artus/install/setup.bash && ros2 bag record ${topics.join(' ')} -o ${bagPath}\"`;\nreturn msg;",
+        "func": "const topics = flow.get(\"selected_topics\");\nif (!topics || topics.length === 0) return null;\nvar d=new Date();\n\nconst bagPath = `/home/tedusar/bags/bag_${d.toISOString()}`;\nmsg.payload = `/bin/bash -c \"source /home/tedusar/aart25_mercator_ws/install/setup.bash && ros2 bag record ${topics.join(' ')} -o ${bagPath}\"`;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -6113,6 +5431,319 @@
             [
                 "e99fcdab5d3d49f2",
                 "d1134f4aa866a63c"
+            ]
+        ]
+    },
+    {
+        "id": "31eee19aa8ff6307",
+        "type": "ui_dropdown",
+        "z": "5a03c82e98531a43",
+        "name": "",
+        "label": "Local Workspace",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "13e23cd70b686f0e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Mercator",
+                "value": "aart25_mercator_ws",
+                "type": "str"
+            },
+            {
+                "label": "Warthog",
+                "value": "aart25_warthog_ws",
+                "type": "str"
+            },
+            {
+                "label": "Artus",
+                "value": "aart25_artus",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "65ef9b511bcc78fc"
+            ]
+        ]
+    },
+    {
+        "id": "0c4673dd79748d2a",
+        "type": "ui_toast",
+        "z": "5a03c82e98531a43",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 940,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d301fd8ffa0514d6",
+        "type": "ui_button",
+        "z": "5a03c82e98531a43",
+        "name": "",
+        "group": "2a53994c842a2f01",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shutdown",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "a1eb2df6d8b44e60"
+            ]
+        ]
+    },
+    {
+        "id": "a1eb2df6d8b44e60",
+        "type": "ui_toast",
+        "z": "5a03c82e98531a43",
+        "position": "prompt",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Are you sure? Enter sudo password:",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "27d8235b45f7b245"
+            ]
+        ]
+    },
+    {
+        "id": "27d8235b45f7b245",
+        "type": "function",
+        "z": "5a03c82e98531a43",
+        "name": "function 24",
+        "func": "msg.payload = `echo ${msg.payload} | sudo -S shutdown now`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 260,
+        "wires": [
+            [
+                "43c139766969de4c"
+            ]
+        ]
+    },
+    {
+        "id": "43c139766969de4c",
+        "type": "exec",
+        "z": "5a03c82e98531a43",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 990,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "9b9430a414cce107"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9b9430a414cce107",
+        "type": "ui_toast",
+        "z": "5a03c82e98531a43",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1200,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2bfda9108d76d4c5",
+        "type": "ui_button",
+        "z": "5a03c82e98531a43",
+        "name": "",
+        "group": "2a53994c842a2f01",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "7314fa41e85fa6de"
+            ]
+        ]
+    },
+    {
+        "id": "7314fa41e85fa6de",
+        "type": "ui_toast",
+        "z": "5a03c82e98531a43",
+        "position": "prompt",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Are you sure? Enter sudo password:",
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "cd4e87fee4f2f437"
+            ]
+        ]
+    },
+    {
+        "id": "cd4e87fee4f2f437",
+        "type": "function",
+        "z": "5a03c82e98531a43",
+        "name": "function 25",
+        "func": "msg.payload = `echo ${msg.payload} | sudo -S reboot now`\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 340,
+        "wires": [
+            [
+                "21c88241fdc9c232"
+            ]
+        ]
+    },
+    {
+        "id": "21c88241fdc9c232",
+        "type": "exec",
+        "z": "5a03c82e98531a43",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 990,
+        "y": 340,
+        "wires": [
+            [],
+            [
+                "c0f3bbf9a28e2dc4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c0f3bbf9a28e2dc4",
+        "type": "ui_toast",
+        "z": "5a03c82e98531a43",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1200,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "65ef9b511bcc78fc",
+        "type": "change",
+        "z": "5a03c82e98531a43",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "workspace",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "0c4673dd79748d2a"
             ]
         ]
     }
